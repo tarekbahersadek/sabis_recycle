@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sabis Recycle Quiz</title>
+
+    <link rel="stylesheet" href="quiz.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+                <h1>
+                    <span class="s">S</span>abis
+                    <span class="bigone">
+                        recyc<span class="l">l</span>e
+                    </span>
+                </h1>
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="ai.html">Ask AI</a>
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- QUIZ INTRO -->
+
+    <main>
+
+        <section class="quiz-intro">
+
+            <div class="quiz-intro-box">
+
+                <h1>♻️ Sabis Recycle Quiz</h1>
+
+                <p>
+                    Test your recycling knowledge!
+                </p>
+
+                <p class="quiz-info">
+                    This quiz has <strong>20 questions</strong>.
+                    Answer all the questions and see your score at the end.
+                </p>
+
+                <button id="startQuiz">
+                    Start Quiz
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUIZ -->
+
+        <section class="quiz-section" id="quizSection">
+
+            <div class="quiz-box">
+
+                <!-- PROGRESS -->
+
+                <div class="quiz-top">
+
+                    <span id="questionNumber">
+                        Question 1 of 20
+                    </span>
+
+                    <span id="scoreDisplay">
+                        Score: 0
+                    </span>
+
+                </div>
+
+
+                <!-- PROGRESS BAR -->
+
+                <div class="progress-container">
+
+                    <div
+                        id="progressBar"
+                        class="progress-bar">
+                    </div>
+
+                </div>
+
+
+                <!-- QUESTION -->
+
+                <div class="question-container">
+
+                    <h2 id="question">
+                        Question goes here
+                    </h2>
+
+                </div>
+
+
+                <!-- ANSWERS -->
+
+                <div
+                    id="answers"
+                    class="answers">
+                </div>
+
+
+                <!-- FEEDBACK -->
+
+                <div
+                    id="feedback"
+                    class="feedback">
+                </div>
+
+
+                <!-- NEXT BUTTON -->
+
+                <button
+                    id="nextButton"
+                    class="next-button"
+                    style="display: none;">
+
+                    Next Question →
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULTS -->
+
+        <section
+            class="result-section"
+            id="resultSection">
+
+            <div class="result-box">
+
+                <h1>🎉 Quiz Complete!</h1>
+
+                <p>
+                    Great job finishing the Sabis Recycle Quiz!
+                </p>
+
+                <div class="final-score">
+
+                    <span>Your Score</span>
+
+                    <strong id="finalScore">
+                        0 / 20
+                    </strong>
+
+                </div>
+
+                <p id="resultMessage"></p>
+
+                <button id="restartQuiz">
+                    Try Again
+                </button>
+
+                <a
+                    href="index.html"
+                    class="home-button">
+
+                    Back to Home
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h2>
+            <span class="sss">S</span>abis
+            <span class="re">recycle</span>
+        </h2>
+
+        <p>
+            Reduce • Reuse • Recycle ♻️
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="quiz.js"></script>
+
+</body>
+
+</html>

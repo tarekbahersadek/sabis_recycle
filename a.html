@@ -1,0 +1,1759 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>About SABIS Recycle</title>
+
+
+    <!-- =========================================
+         CSS
+    ========================================== -->
+
+    <style>
+
+        /* ==============================
+           GENERAL
+        ============================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+
+            font-family: Arial, sans-serif;
+
+            background-color: #e8f5e9;
+
+            color: #222;
+        }
+
+
+        /* ==============================
+           HEADER
+        ============================== */
+
+        header {
+            background-color: darkgreen;
+
+            padding: 10px 0;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            box-shadow:
+                0 3px 12px
+                rgba(0, 0, 0, 0.25);
+        }
+
+
+        nav {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            margin-inline: 40px;
+        }
+
+
+        /* ==============================
+           LOGO
+        ============================== */
+
+        .logo h1 {
+            color: white;
+
+            font-size: 40px;
+
+            font-weight: 900;
+
+            margin: 10px 0;
+        }
+
+
+        .bigone {
+            color: blue;
+        }
+
+
+        .s {
+            color: white;
+
+            border: solid 2px black;
+
+            border-radius: 15px;
+
+            padding: 2px 6px;
+        }
+
+
+        .l {
+            color: blue;
+        }
+
+
+        /* ==============================
+           NAV LINKS
+        ============================== */
+
+        .nav-links {
+            display: flex;
+
+            gap: 25px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .nav-links a {
+            text-decoration: none;
+
+            color: white;
+
+            font-size: 18px;
+
+            transition: 0.3s;
+        }
+
+
+        .nav-links a:hover {
+            color: #4da6ff;
+        }
+
+
+        /* ==============================
+           HERO
+        ============================== */
+
+        .hero {
+
+            min-height: 560px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            padding: 60px 20px;
+
+
+            background-image:
+
+                linear-gradient(
+                    rgba(0, 70, 0, 0.72),
+                    rgba(0, 70, 0, 0.72)
+                ),
+
+                url("https://png.pngtree.com/thumb_back/fh260/background/20230627/pngtree-illustration-of-earth-preservation-3d-rendered-hand-holding-recycle-icon-image_3684729.jpg");
+
+
+            background-position: center;
+
+            background-size: cover;
+
+            background-attachment: fixed;
+        }
+
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+
+        .hero h1 {
+            color: white;
+
+            font-size: 58px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .hero h1 span {
+            color: #4da6ff;
+        }
+
+
+        .hero p {
+            color: white;
+
+            font-size: 21px;
+
+            line-height: 1.7;
+
+            margin-bottom: 30px;
+        }
+
+
+        .hero-button {
+            display: inline-block;
+
+            text-decoration: none;
+
+            background-color: white;
+
+            color: darkgreen;
+
+            padding: 15px 30px;
+
+            border-radius: 10px;
+
+            font-size: 18px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+
+        .hero-button:hover {
+            background-color: blue;
+
+            color: white;
+
+            transform: scale(1.05);
+        }
+
+
+        /* ==============================
+           GENERAL SECTIONS
+        ============================== */
+
+        .section {
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding: 70px 20px;
+        }
+
+
+        .section-title {
+
+            text-align: center;
+
+            color: darkgreen;
+
+            font-size: 38px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .section-description {
+
+            max-width: 800px;
+
+            margin: 0 auto 40px;
+
+            text-align: center;
+
+            color: #555;
+
+            font-size: 18px;
+
+            line-height: 1.7;
+        }
+
+
+        /* ==============================
+           ABOUT CARD
+        ============================== */
+
+        .about-container {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 30px;
+
+            align-items: stretch;
+        }
+
+
+        .about-card {
+
+            background-color: white;
+
+            padding: 35px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 8px 25px
+                rgba(0, 0, 0, 0.12);
+
+            transition: 0.3s;
+        }
+
+
+        .about-card:hover {
+
+            transform: translateY(-5px);
+        }
+
+
+        .about-card h2 {
+
+            color: darkgreen;
+
+            font-size: 30px;
+
+            margin-top: 0;
+        }
+
+
+        .about-card p {
+
+            color: #555;
+
+            line-height: 1.8;
+
+            font-size: 17px;
+        }
+
+
+        .about-icon {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    darkgreen,
+                    #138a36
+                );
+
+            border-radius: 20px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            min-height: 300px;
+
+            font-size: 110px;
+
+            box-shadow:
+                0 8px 25px
+                rgba(0, 0, 0, 0.18);
+        }
+
+
+        /* ==============================
+           MISSION
+        ============================== */
+
+        .mission-section {
+
+            background-color: #dff0e2;
+
+            max-width: none;
+
+            padding-left: 5%;
+
+            padding-right: 5%;
+        }
+
+
+        .mission-grid {
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+
+        .mission-card {
+
+            background-color: white;
+
+            padding: 30px;
+
+            text-align: center;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 7px 20px
+                rgba(0, 0, 0, 0.1);
+
+            transition: 0.3s;
+        }
+
+
+        .mission-card:hover {
+
+            transform: translateY(-8px);
+        }
+
+
+        .mission-icon {
+
+            font-size: 50px;
+        }
+
+
+        .mission-card h3 {
+
+            color: darkgreen;
+
+            font-size: 24px;
+        }
+
+
+        .mission-card p {
+
+            color: #555;
+
+            line-height: 1.6;
+        }
+
+
+        /* ==============================
+           WEBSITE FEATURES
+        ============================== */
+
+        .features {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 20px;
+
+            max-width: 900px;
+
+            margin: auto;
+        }
+
+
+        .feature {
+
+            background-color: white;
+
+            padding: 25px;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 5px 15px
+                rgba(0, 0, 0, 0.1);
+
+            display: flex;
+
+            gap: 18px;
+
+            align-items: center;
+        }
+
+
+        .feature-icon {
+
+            min-width: 55px;
+
+            height: 55px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background-color: darkgreen;
+
+            color: white;
+
+            font-size: 25px;
+        }
+
+
+        .feature h3 {
+
+            margin: 0 0 7px;
+
+            color: darkgreen;
+        }
+
+
+        .feature p {
+
+            margin: 0;
+
+            color: #555;
+
+            line-height: 1.5;
+        }
+
+
+        /* ==============================
+           TEAM
+        ============================== */
+
+        .team-section {
+
+            background-color: #f4faf4;
+
+            max-width: none;
+
+            padding-left: 5%;
+
+            padding-right: 5%;
+        }
+
+
+        .team {
+
+            max-width: 850px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 25px;
+        }
+
+
+        .team-card {
+
+            background-color: white;
+
+            border-radius: 20px;
+
+            padding: 35px;
+
+            text-align: center;
+
+            box-shadow:
+                0 7px 20px
+                rgba(0, 0, 0, 0.1);
+
+            transition: 0.3s;
+        }
+
+
+        .team-card:hover {
+
+            transform: translateY(-7px);
+        }
+
+
+        .team-avatar {
+
+            width: 90px;
+
+            height: 90px;
+
+            margin: 0 auto 15px;
+
+            border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    darkgreen,
+                    #138a36
+                );
+
+            color: white;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            font-size: 35px;
+
+            font-weight: bold;
+        }
+
+
+        .team-card h3 {
+
+            color: darkgreen;
+
+            font-size: 24px;
+
+            margin: 10px 0;
+        }
+
+
+        .team-card p {
+
+            color: #555;
+
+            line-height: 1.6;
+        }
+
+
+        /* ==============================
+           INTERACTIVE COUNTER
+        ============================== */
+
+        .impact-box {
+
+            max-width: 850px;
+
+            margin: auto;
+
+            background-color: white;
+
+            padding: 40px;
+
+            border-radius: 20px;
+
+            text-align: center;
+
+            box-shadow:
+                0 8px 25px
+                rgba(0, 0, 0, 0.12);
+        }
+
+
+        .counter {
+
+            font-size: 55px;
+
+            color: darkgreen;
+
+            font-weight: bold;
+
+            margin: 20px 0;
+        }
+
+
+        .impact-box p {
+
+            color: #555;
+
+            font-size: 18px;
+
+            line-height: 1.6;
+        }
+
+
+        .impact-button {
+
+            border: none;
+
+            background-color: darkgreen;
+
+            color: white;
+
+            padding: 15px 28px;
+
+            border-radius: 10px;
+
+            font-size: 17px;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+
+        .impact-button:hover {
+
+            background-color: blue;
+
+            transform: scale(1.05);
+        }
+
+
+        /* ==============================
+           CTA
+        ============================== */
+
+        .cta {
+
+            background-color: darkgreen;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 70px 20px;
+        }
+
+
+        .cta h2 {
+
+            font-size: 40px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .cta p {
+
+            font-size: 18px;
+
+            margin-bottom: 30px;
+        }
+
+
+        .cta-buttons {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .cta-buttons a {
+
+            text-decoration: none;
+
+            padding: 15px 28px;
+
+            border-radius: 10px;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+
+        .explore-button {
+
+            background-color: white;
+
+            color: darkgreen;
+        }
+
+
+        .quiz-button {
+
+            background-color: blue;
+
+            color: white;
+        }
+
+
+        .cta-buttons a:hover {
+
+            transform: scale(1.05);
+        }
+
+
+        /* ==============================
+           FOOTER
+        ============================== */
+
+        footer {
+
+            background-color: #004d00;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px;
+        }
+
+
+        footer h2 {
+
+            margin: 0;
+
+            font-size: 30px;
+        }
+
+
+        footer p {
+
+            margin-bottom: 0;
+        }
+
+
+        .re {
+
+            color: blue;
+        }
+
+
+        .sss {
+
+            color: white;
+
+            border: solid 1px black;
+
+            border-radius: 15px;
+
+            padding: 2px 5px;
+        }
+
+
+        /* ==============================
+           TOP BUTTON
+        ============================== */
+
+        #topButton {
+
+            position: fixed;
+
+            right: 25px;
+
+            bottom: 25px;
+
+            width: 50px;
+
+            height: 50px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background-color: darkgreen;
+
+            color: white;
+
+            font-size: 22px;
+
+            cursor: pointer;
+
+            display: none;
+
+            z-index: 100;
+
+            transition: 0.3s;
+        }
+
+
+        #topButton:hover {
+
+            background-color: blue;
+
+            transform: scale(1.1);
+        }
+
+
+        /* ==============================
+           MOBILE
+        ============================== */
+
+        @media (max-width: 850px) {
+
+            nav {
+
+                flex-direction: column;
+
+                gap: 10px;
+
+                margin-inline: 15px;
+            }
+
+
+            .logo h1 {
+
+                font-size: 32px;
+            }
+
+
+            .nav-links {
+
+                justify-content: center;
+
+                gap: 15px;
+            }
+
+
+            .hero h1 {
+
+                font-size: 42px;
+            }
+
+
+            .about-container {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .mission-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .features {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .team {
+
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            .hero h1 {
+
+                font-size: 32px;
+            }
+
+
+            .hero p {
+
+                font-size: 17px;
+            }
+
+
+            .section-title {
+
+                font-size: 30px;
+            }
+
+
+            .about-icon {
+
+                font-size: 80px;
+            }
+
+
+            .counter {
+
+                font-size: 45px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+
+                <h1>
+
+                    <span class="s">S</span>abis
+
+                    <span class="bigone">
+
+                        recyc<span class="l">l</span>e
+
+                    </span>
+
+                </h1>
+
+            </div>
+
+
+            <div class="nav-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="explore.html">
+                    Explore
+                </a>
+
+                <a href="w.html">
+                    What Is Recycle?
+                </a>
+
+                <a href="ai.html">
+                    Ask AI
+                </a>
+
+                <a href="quiz.html">
+                    Quiz
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================================
+         HERO
+    ========================================== -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+
+                About
+                <span>SABIS Recycle</span> 🌱
+
+            </h1>
+
+
+            <p>
+
+                Welcome to SABIS Recycle — an
+                educational website designed to make
+                learning about recycling simple,
+                interactive, and fun.
+
+            </p>
+
+
+            <a
+                href="#about"
+                class="hero-button">
+
+                Discover Our Project ↓
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         ABOUT PROJECT
+    ========================================== -->
+
+    <section
+        class="section"
+        id="about">
+
+        <h2 class="section-title">
+
+            About Our Project
+
+        </h2>
+
+
+        <p class="section-description">
+
+            SABIS Recycle is a student-focused
+            recycling website that combines
+            education, games, quizzes, videos,
+            and an AI assistant to help students
+            learn more about responsible recycling.
+
+        </p>
+
+
+        <div class="about-container">
+
+
+            <div class="about-card">
+
+                <h2>
+                    ♻️ What Is SABIS Recycle?
+                </h2>
+
+
+                <p>
+
+                    Our goal is to make learning about
+                    recycling more interesting than
+                    simply reading a list of facts.
+
+                </p>
+
+
+                <p>
+
+                    The website gives students different
+                    ways to learn. They can explore
+                    recycling information, watch an
+                    educational video, ask the recycling
+                    AI questions, and complete a quiz.
+
+                </p>
+
+
+                <p>
+
+                    The main idea is simple:
+
+                    <strong>
+                        Learn → Practice → Recycle
+                    </strong>
+
+                </p>
+
+            </div>
+
+
+            <div class="about-icon">
+
+                🌍♻️
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         MISSION
+    ========================================== -->
+
+    <section class="section mission-section">
+
+        <h2 class="section-title">
+
+            Our Goals
+
+        </h2>
+
+
+        <p class="section-description">
+
+            The website focuses on making recycling
+            education engaging and easy to understand.
+
+        </p>
+
+
+        <div class="mission-grid">
+
+
+            <div class="mission-card">
+
+                <div class="mission-icon">
+                    📚
+                </div>
+
+                <h3>
+                    Educate
+                </h3>
+
+                <p>
+
+                    Explain recycling concepts in a
+                    simple and student-friendly way.
+
+                </p>
+
+            </div>
+
+
+            <div class="mission-card">
+
+                <div class="mission-icon">
+                    🎮
+                </div>
+
+                <h3>
+                    Make It Fun
+                </h3>
+
+                <p>
+
+                    Use quizzes, interactive activities,
+                    and games to make learning more
+                    enjoyable.
+
+                </p>
+
+            </div>
+
+
+            <div class="mission-card">
+
+                <div class="mission-icon">
+                    🌱
+                </div>
+
+                <h3>
+                    Inspire Action
+                </h3>
+
+                <p>
+
+                    Encourage students to think about
+                    how their everyday choices affect
+                    waste and resources.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         WEBSITE FEATURES
+    ========================================== -->
+
+    <section class="section">
+
+        <h2 class="section-title">
+
+            What's Inside The Website?
+
+        </h2>
+
+
+        <p class="section-description">
+
+            Each part of the website has a different
+            way to help students learn about recycling.
+
+        </p>
+
+
+        <div class="features">
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    ♻️
+                </div>
+
+                <div>
+
+                    <h3>
+                        Explore
+                    </h3>
+
+                    <p>
+
+                        Explore recycling information
+                        and try the interactive sorting
+                        game.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    📖
+                </div>
+
+                <div>
+
+                    <h3>
+                        What Is Recycling?
+                    </h3>
+
+                    <p>
+
+                        Learn what recycling means,
+                        how it works, and why it matters.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🤖
+                </div>
+
+                <div>
+
+                    <h3>
+                        Ask AI
+                    </h3>
+
+                    <p>
+
+                        Ask the recycling AI questions
+                        and learn about recycling.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    📝
+                </div>
+
+                <div>
+
+                    <h3>
+                        Recycling Quiz
+                    </h3>
+
+                    <p>
+
+                        Test your recycling knowledge
+                        with the recycling quiz.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🎥
+                </div>
+
+                <div>
+
+                    <h3>
+                        Educational Video
+                    </h3>
+
+                    <p>
+
+                        Watch a recycling video and
+                        learn through visual examples.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🌍
+                </div>
+
+                <div>
+
+                    <h3>
+                        Planet Friendly
+                    </h3>
+
+                    <p>
+
+                        Learn simple ideas that can
+                        help reduce waste and encourage
+                        responsible resource use.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         TEAM
+    ========================================== -->
+
+    <section class="section team-section">
+
+        <h2 class="section-title">
+
+            Our Team 👨‍💻
+
+        </h2>
+
+
+        <p class="section-description">
+
+            Meet the students behind the
+            SABIS Recycle project.
+
+        </p>
+
+
+        <div class="team">
+
+
+            <div class="team-card">
+
+                <div class="team-avatar">
+                    M
+                </div>
+
+                <h3>
+                    Manwel
+                </h3>
+
+                <p>
+
+                    Team member and developer
+                    responsible for the SABIS
+                    Recycle project.
+
+                </p>
+
+            </div>
+
+
+            <div class="team-card">
+
+                <div class="team-avatar">
+                    T
+                </div>
+
+                <h3>
+                    Tarek
+                </h3>
+
+                <p>
+
+                    Team member and developer
+                    working on the website and
+                    recycling project.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         INTERACTIVE IMPACT
+    ========================================== -->
+
+    <section class="section">
+
+        <h2 class="section-title">
+
+            Make Your Recycling Promise 🌱
+
+        </h2>
+
+
+        <p class="section-description">
+
+            Click the button if you promise to try
+            one recycling-friendly action today!
+
+        </p>
+
+
+        <div class="impact-box">
+
+            <p>
+
+                Students who made a recycling promise:
+
+            </p>
+
+
+            <div
+                class="counter"
+                id="counter">
+
+                0
+
+            </div>
+
+
+            <button
+                class="impact-button"
+                id="promiseButton">
+
+                ♻️ I Promise!
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CTA
+    ========================================== -->
+
+    <section class="cta">
+
+        <h2>
+            Ready to Start Learning?
+        </h2>
+
+
+        <p>
+
+            Explore the website, watch the video,
+            ask the AI, and take the quiz!
+
+        </p>
+
+
+        <div class="cta-buttons">
+
+
+            <a
+                href="explore.html"
+                class="explore-button">
+
+                Explore ♻️
+
+            </a>
+
+
+            <a
+                href="quiz.html"
+                class="quiz-button">
+
+                Take Quiz 📝
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+
+        <h2>
+
+            <span class="sss">S</span>abis
+
+            <span class="re">
+                recycle
+            </span>
+
+        </h2>
+
+
+        <p>
+            Reduce • Reuse • Recycle ♻️
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================================
+         TOP BUTTON
+    ========================================== -->
+
+    <button id="topButton">
+        ↑
+    </button>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script>
+
+
+        // =========================================
+        // RECYCLING PROMISE COUNTER
+        // =========================================
+
+        const promiseButton =
+            document.getElementById(
+                "promiseButton"
+            );
+
+
+        const counter =
+            document.getElementById(
+                "counter"
+            );
+
+
+        let promises =
+            Number(
+                localStorage.getItem(
+                    "recyclePromises"
+                )
+            ) || 0;
+
+
+        counter.innerText =
+            promises;
+
+
+        promiseButton.addEventListener(
+            "click",
+            function () {
+
+                promises++;
+
+                counter.innerText =
+                    promises;
+
+
+                localStorage.setItem(
+                    "recyclePromises",
+                    promises
+                );
+
+
+                promiseButton.innerText =
+                    "✅ Promise Made!";
+
+
+                promiseButton.style.backgroundColor =
+                    "blue";
+
+
+                setTimeout(
+                    function () {
+
+                        promiseButton.innerText =
+                            "♻️ I Promise!";
+
+                        promiseButton.style.backgroundColor =
+                            "darkgreen";
+
+                    },
+                    1500
+                );
+
+            }
+        );
+
+
+
+        // =========================================
+        // SCROLL TO TOP
+        // =========================================
+
+        const topButton =
+            document.getElementById(
+                "topButton"
+            );
+
+
+        window.addEventListener(
+            "scroll",
+            function () {
+
+                if (
+                    window.scrollY > 300
+                ) {
+
+                    topButton.style.display =
+                        "block";
+
+                }
+
+                else {
+
+                    topButton.style.display =
+                        "none";
+
+                }
+
+            }
+        );
+
+
+        topButton.addEventListener(
+            "click",
+            function () {
+
+                window.scrollTo({
+
+                    top: 0,
+
+                    behavior: "smooth"
+
+                });
+
+            }
+        );
+
+
+    </script>
+
+
+</body>
+
+</html>

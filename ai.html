@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sabis Recycle AI</title>
+
+    <link rel="stylesheet" href="ai.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+        <nav>
+
+            <div class="logo">
+                <h1>
+                    <span class="s">S</span>abis
+                    <span class="bigone">recyc<span class="l">l</span>e</span>
+                </h1>
+            </div>
+
+            <div class="back">
+                <a href="index.html">← Back to Home</a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- AI SECTION -->
+
+    <main>
+
+        <section class="ai-section">
+
+            <div class="ai-box">
+
+                <h1>♻️ Sabis Recycle AI</h1>
+
+                <p class="description">
+                    Welcome to the Sabis Recycling AI!
+                    Enter your information to access the AI.
+                </p>
+
+
+                <!-- ACCESS LOGIN -->
+
+                <div id="ai-login">
+
+                    <h2>AI Access</h2>
+
+                    <p>
+                        Only authorized Management students can use the AI.
+                    </p>
+
+                    <input
+                        type="text"
+                        id="studentName"
+                        placeholder="Enter your name"
+                        autocomplete="off"
+                    >
+
+                    <input
+                        type="text"
+                        id="studentSlo"
+                        placeholder="Enter your SLO"
+                        autocomplete="off"
+                    >
+
+                    <button onclick="checkAccess()">
+                        Enter AI
+                    </button>
+
+                    <p id="loginMessage"></p>
+
+                </div>
+
+
+                <!-- AI CHAT -->
+
+                <div id="ai-chat" style="display: none;">
+
+                    <div class="welcome">
+                        <h2>🤖 Recycle AI</h2>
+
+                        <p>
+                            Ask me anything about recycling!
+                        </p>
+                    </div>
+
+
+                    <!-- CHAT MESSAGES -->
+
+                    <div id="chatMessages">
+
+                        <div class="ai-message">
+                            🤖 Hello! Welcome to Sabis Recycle AI.
+                            Ask me a question about recycling, waste,
+                            reuse, or your recycling quiz!
+                        </div>
+
+                    </div>
+
+
+                    <!-- CHAT INPUT -->
+
+                    <div class="chat-input">
+
+                        <input
+                            type="text"
+                            id="userQuestion"
+                            placeholder="Ask something about recycling..."
+                            autocomplete="off"
+                        >
+
+                        <button onclick="askAI()">
+                            Ask
+                        </button>
+
+                    </div>
+
+
+                    <!-- QUICK QUESTIONS -->
+
+                    <div class="quick-questions">
+
+                        <p>Try asking:</p>
+
+                        <button onclick="quickQuestion('What is recycling?')">
+                            What is recycling?
+                        </button>
+
+                        <button onclick="quickQuestion('What are the 3 Rs?')">
+                            What are the 3 Rs?
+                        </button>
+
+                        <button onclick="quickQuestion('Can plastic be recycled?')">
+                            Can plastic be recycled?
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h2>
+            <span class="sss">S</span>abis
+            <span class="re">recycle</span>
+        </h2>
+
+        <p>
+            Reduce • Reuse • Recycle ♻️
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="ai.js"></script>
+
+</body>
+
+</html>

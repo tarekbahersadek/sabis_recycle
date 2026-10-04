@@ -1,0 +1,656 @@
+/* =========================
+   GENERAL
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e8f5e9;
+    color: #222;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+header {
+    background-color: darkgreen;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: 40px;
+}
+
+.logo h1 {
+    color: white;
+    font-size: 40px;
+    font-weight: 900;
+    margin: 10px 0;
+}
+
+.logo h1 .bigone {
+    color: blue;
+}
+
+.s {
+    color: white;
+    border: solid 2px black;
+    border-radius: 15px;
+    padding: 2px 6px;
+}
+
+.l {
+    color: blue;
+}
+
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: blue;
+}
+
+
+/* =========================
+   QUIZ INTRO
+   ========================= */
+
+.quiz-intro {
+    min-height: 600px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 20px;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 80, 0, 0.55),
+            rgba(0, 80, 0, 0.55)
+        ),
+        url("https://png.pngtree.com/thumb_back/fh260/background/20230627/pngtree-illustration-of-earth-preservation-3d-rendered-hand-holding-recycle-icon-image_3684729.jpg");
+
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/* =========================
+   INTRO BOX
+   ========================= */
+
+.quiz-intro-box {
+    width: 650px;
+    max-width: 95%;
+
+    background-color: white;
+
+    padding: 45px;
+
+    text-align: center;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+.quiz-intro-box h1 {
+    color: darkgreen;
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.quiz-intro-box p {
+    color: #555;
+    font-size: 19px;
+}
+
+.quiz-info {
+    margin: 25px 0;
+}
+
+
+/* =========================
+   START BUTTON
+   ========================= */
+
+#startQuiz {
+    background-color: darkgreen;
+
+    color: white;
+
+    border: none;
+
+    padding: 15px 35px;
+
+    border-radius: 10px;
+
+    font-size: 19px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#startQuiz:hover {
+    background-color: blue;
+
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   QUIZ SECTION
+   ========================= */
+
+.quiz-section {
+    min-height: 700px;
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 60px 20px;
+
+    background-color: #e8f5e9;
+}
+
+
+/* =========================
+   QUIZ BOX
+   ========================= */
+
+.quiz-box {
+    width: 750px;
+    max-width: 95%;
+
+    background-color: white;
+
+    padding: 35px;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================
+   QUIZ TOP
+   ========================= */
+
+.quiz-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    color: darkgreen;
+
+    font-weight: bold;
+
+    font-size: 17px;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   PROGRESS BAR
+   ========================= */
+
+.progress-container {
+    width: 100%;
+
+    height: 12px;
+
+    background-color: #d7e8d9;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    margin-bottom: 30px;
+}
+
+.progress-bar {
+    width: 5%;
+
+    height: 100%;
+
+    background-color: darkgreen;
+
+    border-radius: 20px;
+
+    transition: width 0.4s ease;
+}
+
+
+/* =========================
+   QUESTION
+   ========================= */
+
+.question-container {
+    margin-bottom: 25px;
+}
+
+.question-container h2 {
+    color: #174d22;
+
+    font-size: 25px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================
+   ANSWERS
+   ========================= */
+
+.answers {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.answer-button {
+    width: 100%;
+
+    padding: 16px;
+
+    background-color: white;
+
+    color: #222;
+
+    border: 2px solid #b7d8bd;
+
+    border-radius: 12px;
+
+    font-size: 17px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.answer-button:hover {
+    background-color: #e8f5e9;
+
+    border-color: darkgreen;
+}
+
+
+/* =========================
+   CORRECT / WRONG
+   ========================= */
+
+.answer-button.correct {
+    background-color: #c8f7d0;
+
+    border-color: green;
+
+    color: #145c20;
+}
+
+.answer-button.wrong {
+    background-color: #ffd5d5;
+
+    border-color: red;
+
+    color: #8b0000;
+}
+
+.answer-button:disabled {
+    cursor: not-allowed;
+}
+
+
+/* =========================
+   FEEDBACK
+   ========================= */
+
+.feedback {
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    background-color: #f1f8f2;
+
+    color: #174d22;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+
+    display: none;
+}
+
+
+/* =========================
+   NEXT BUTTON
+   ========================= */
+
+.next-button {
+    display: block;
+
+    margin: 25px 0 0 auto;
+
+    background-color: darkgreen;
+
+    color: white;
+
+    border: none;
+
+    padding: 13px 25px;
+
+    border-radius: 10px;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.next-button:hover {
+    background-color: blue;
+
+    transform: scale(1.04);
+}
+
+
+/* =========================
+   RESULT SECTION
+   ========================= */
+
+.result-section {
+    min-height: 700px;
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 60px 20px;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 80, 0, 0.6),
+            rgba(0, 80, 0, 0.6)
+        ),
+        url("https://png.pngtree.com/thumb_back/fh260/background/20230627/pngtree-illustration-of-earth-preservation-3d-rendered-hand-holding-recycle-icon-image_3684729.jpg");
+
+    background-position: center;
+
+    background-size: cover;
+}
+
+
+/* =========================
+   RESULT BOX
+   ========================= */
+
+.result-box {
+    width: 600px;
+    max-width: 95%;
+
+    background-color: white;
+
+    padding: 45px;
+
+    text-align: center;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+.result-box h1 {
+    color: darkgreen;
+
+    font-size: 35px;
+}
+
+.result-box p {
+    color: #555;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   FINAL SCORE
+   ========================= */
+
+.final-score {
+    background-color: #e8f5e9;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    margin: 25px 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.final-score span {
+    color: #555;
+
+    font-size: 18px;
+}
+
+.final-score strong {
+    color: darkgreen;
+
+    font-size: 45px;
+}
+
+
+/* =========================
+   RESULT MESSAGE
+   ========================= */
+
+#resultMessage {
+    font-weight: bold;
+
+    color: darkgreen;
+}
+
+
+/* =========================
+   RESTART BUTTON
+   ========================= */
+
+#restartQuiz {
+    background-color: darkgreen;
+
+    color: white;
+
+    border: none;
+
+    padding: 14px 25px;
+
+    border-radius: 10px;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    margin: 10px;
+}
+
+#restartQuiz:hover {
+    background-color: blue;
+
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   HOME BUTTON
+   ========================= */
+
+.home-button {
+    display: inline-block;
+
+    background-color: white;
+
+    color: darkgreen;
+
+    border: 2px solid darkgreen;
+
+    text-decoration: none;
+
+    padding: 12px 22px;
+
+    border-radius: 10px;
+
+    font-size: 17px;
+
+    transition: 0.3s;
+
+    margin: 10px;
+}
+
+.home-button:hover {
+    background-color: darkgreen;
+
+    color: white;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    background-color: darkgreen;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+footer h2 {
+    font-size: 30px;
+
+    margin: 0;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+.re {
+    color: blue;
+}
+
+.sss {
+    color: white;
+
+    border: solid 1px black;
+
+    border-radius: 15px;
+
+    padding: 2px 5px;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+
+    nav {
+        flex-direction: column;
+
+        gap: 15px;
+
+        margin-inline: 15px;
+    }
+
+    .logo h1 {
+        font-size: 32px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .quiz-intro-box {
+        padding: 30px 20px;
+    }
+
+    .quiz-intro-box h1 {
+        font-size: 30px;
+    }
+
+    .quiz-box {
+        padding: 25px 18px;
+    }
+
+    .question-container h2 {
+        font-size: 21px;
+    }
+
+    .answer-button {
+        font-size: 16px;
+    }
+
+    .quiz-top {
+        font-size: 14px;
+    }
+
+    .result-box {
+        padding: 30px 20px;
+    }
+
+    .final-score strong {
+        font-size: 38px;
+    }
+}

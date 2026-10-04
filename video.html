@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Sabis Recycle - Watch Video</title>
+
+
+    <!-- =========================
+         CSS
+         ========================= -->
+
+    <style>
+
+        /* =========================
+           GENERAL
+           ========================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+
+            font-family: Arial, sans-serif;
+
+            background-color: #e8f5e9;
+
+            color: #222;
+        }
+
+
+        /* =========================
+           HEADER
+           ========================= */
+
+        header {
+            background-color: darkgreen;
+
+            padding: 10px 0;
+
+            box-shadow:
+                0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+
+        nav {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            margin-inline: 40px;
+        }
+
+
+        /* LOGO */
+
+        .logo h1 {
+            color: white;
+
+            font-size: 40px;
+
+            font-weight: 900;
+
+            margin: 10px 0;
+        }
+
+
+        .bigone {
+            color: blue;
+        }
+
+
+        .s {
+            color: white;
+
+            border: solid 2px black;
+
+            border-radius: 15px;
+
+            padding: 2px 6px;
+        }
+
+
+        .l {
+            color: blue;
+        }
+
+
+        /* =========================
+           NAVIGATION
+           ========================= */
+
+        .nav-links {
+            display: flex;
+
+            gap: 25px;
+        }
+
+
+        .nav-links a {
+            text-decoration: none;
+
+            color: white;
+
+            font-size: 18px;
+
+            transition: 0.3s;
+        }
+
+
+        .nav-links a:hover {
+            color: blue;
+        }
+
+
+        /* =========================
+           MAIN VIDEO SECTION
+           ========================= */
+
+        .video-section {
+
+            min-height: 700px;
+
+            padding: 70px 20px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+
+            background-image:
+
+                linear-gradient(
+                    rgba(0, 70, 0, 0.65),
+                    rgba(0, 70, 0, 0.65)
+                ),
+
+                url("https://png.pngtree.com/thumb_back/fh260/background/20230627/pngtree-illustration-of-earth-preservation-3d-rendered-hand-holding-recycle-icon-image_3684729.jpg");
+
+
+            background-position: center;
+
+            background-size: cover;
+
+            background-attachment: fixed;
+        }
+
+
+        /* =========================
+           VIDEO BOX
+           ========================= */
+
+        .video-box {
+
+            width: 900px;
+
+            max-width: 95%;
+
+            background-color: white;
+
+            padding: 35px;
+
+            border-radius: 25px;
+
+            box-shadow:
+                0 15px 40px
+                rgba(0, 0, 0, 0.35);
+
+            text-align: center;
+        }
+
+
+        .video-box h1 {
+
+            color: darkgreen;
+
+            font-size: 38px;
+
+            margin-top: 0;
+
+            margin-bottom: 10px;
+        }
+
+
+        .video-box h1 span {
+
+            color: blue;
+        }
+
+
+        .video-box > p {
+
+            color: #555;
+
+            font-size: 18px;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* =========================
+           VIDEO
+           ========================= */
+
+        .video-container {
+
+            position: relative;
+
+            width: 100%;
+
+            padding-bottom: 56.25%;
+
+            height: 0;
+
+            overflow: hidden;
+
+            border-radius: 15px;
+
+            background-color: black;
+
+            box-shadow:
+                0 8px 20px
+                rgba(0, 0, 0, 0.25);
+        }
+
+
+        .video-container iframe {
+
+            position: absolute;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 100%;
+
+            border: none;
+        }
+
+
+        /* =========================
+           INFORMATION
+           ========================= */
+
+        .video-info {
+
+            margin-top: 30px;
+
+            padding: 20px;
+
+            background-color: #e8f5e9;
+
+            border-radius: 15px;
+
+            text-align: left;
+        }
+
+
+        .video-info h2 {
+
+            color: darkgreen;
+
+            margin-top: 0;
+        }
+
+
+        .video-info p {
+
+            color: #444;
+
+            line-height: 1.6;
+
+            font-size: 16px;
+        }
+
+
+        /* =========================
+           BUTTONS
+           ========================= */
+
+        .buttons {
+
+            margin-top: 30px;
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .buttons a {
+
+            text-decoration: none;
+
+            padding: 14px 25px;
+
+            border-radius: 10px;
+
+            font-size: 17px;
+
+            transition: 0.3s;
+        }
+
+
+        /* HOME BUTTON */
+
+        .home-button {
+
+            background-color: white;
+
+            color: darkgreen;
+
+            border: 2px solid darkgreen;
+        }
+
+
+        .home-button:hover {
+
+            background-color: darkgreen;
+
+            color: white;
+
+            transform: scale(1.04);
+        }
+
+
+        /* QUIZ BUTTON */
+
+        .quiz-button {
+
+            background-color: darkgreen;
+
+            color: white;
+
+            border: 2px solid darkgreen;
+        }
+
+
+        .quiz-button:hover {
+
+            background-color: blue;
+
+            border-color: blue;
+
+            transform: scale(1.04);
+        }
+
+
+        /* =========================
+           FOOTER
+           ========================= */
+
+        footer {
+
+            background-color: darkgreen;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px;
+        }
+
+
+        footer h2 {
+
+            margin: 0;
+
+            font-size: 30px;
+        }
+
+
+        footer p {
+
+            margin-bottom: 0;
+
+            color: white;
+        }
+
+
+        .re {
+
+            color: blue;
+        }
+
+
+        .sss {
+
+            color: white;
+
+            border: solid 1px black;
+
+            border-radius: 15px;
+
+            padding: 2px 5px;
+        }
+
+
+        /* =========================
+           SCROLL TO TOP BUTTON
+           ========================= */
+
+        #topButton {
+
+            position: fixed;
+
+            bottom: 25px;
+
+            right: 25px;
+
+            width: 50px;
+
+            height: 50px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background-color: darkgreen;
+
+            color: white;
+
+            font-size: 22px;
+
+            cursor: pointer;
+
+            display: none;
+
+            box-shadow:
+                0 4px 10px
+                rgba(0, 0, 0, 0.3);
+
+            transition: 0.3s;
+
+            z-index: 100;
+        }
+
+
+        #topButton:hover {
+
+            background-color: blue;
+
+            transform: scale(1.1);
+        }
+
+
+        /* =========================
+           MOBILE
+           ========================= */
+
+        @media (max-width: 700px) {
+
+            nav {
+
+                flex-direction: column;
+
+                gap: 15px;
+
+                margin-inline: 15px;
+            }
+
+
+            .logo h1 {
+
+                font-size: 32px;
+            }
+
+
+            .nav-links {
+
+                gap: 15px;
+            }
+
+
+            .nav-links a {
+
+                font-size: 16px;
+            }
+
+
+            .video-section {
+
+                padding: 40px 10px;
+            }
+
+
+            .video-box {
+
+                padding: 25px 15px;
+            }
+
+
+            .video-box h1 {
+
+                font-size: 29px;
+            }
+
+
+            .video-box > p {
+
+                font-size: 16px;
+            }
+
+
+            .buttons {
+
+                flex-direction: column;
+            }
+
+
+            .buttons a {
+
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+         ========================= -->
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+
+                <h1>
+
+                    <span class="s">S</span>abis
+
+                    <span class="bigone">
+
+                        recyc<span class="l">l</span>e
+
+                    </span>
+
+                </h1>
+
+            </div>
+
+
+            <div class="nav-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="ai.html">
+                    Ask AI
+                </a>
+
+                <a href="quiz.html">
+                    Quiz
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         VIDEO SECTION
+         ========================= -->
+
+    <main>
+
+        <section class="video-section">
+
+            <div class="video-box">
+
+
+                <h1>
+                    ♻️ Learn About
+                    <span>Recycling</span>
+                </h1>
+
+
+                <p>
+                    Watch the video and learn how recycling
+                    can help protect our planet.
+                </p>
+
+
+
+                <!-- =========================
+                     VIDEO
+                     ========================= -->
+
+                <div class="video-container">
+
+                    <iframe
+                        src="https://www.youtube.com/embed/_6xlNyWPpB8"
+                        title="Recycling Education Video"
+                        allow="accelerometer;
+                               autoplay;
+                               clipboard-write;
+                               encrypted-media;
+                               gyroscope;
+                               picture-in-picture;
+                               web-share"
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+
+
+
+                <!-- =========================
+                     INFORMATION
+                     ========================= -->
+
+                <div class="video-info">
+
+                    <h2>
+                        🌱 What did you learn?
+                    </h2>
+
+                    <p>
+                        Recycling is one way we can reduce
+                        waste and conserve materials.
+                        Remember the three important words:
+                    </p>
+
+                    <p>
+                        <strong>
+                            REDUCE • REUSE • RECYCLE
+                        </strong>
+                    </p>
+
+                    <p>
+                        After watching the video, test
+                        your knowledge by taking our
+                        recycling quiz!
+                    </p>
+
+                </div>
+
+
+
+                <!-- =========================
+                     BUTTONS
+                     ========================= -->
+
+                <div class="buttons">
+
+                    <a
+                        href="index.html"
+                        class="home-button">
+
+                        ← Back to Home
+
+                    </a>
+
+
+                    <a
+                        href="quiz.html"
+                        class="quiz-button">
+
+                        Take the Quiz ♻️
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
+
+    <footer>
+
+        <h2>
+
+            <span class="sss">S</span>abis
+
+            <span class="re">
+                recycle
+            </span>
+
+        </h2>
+
+        <p>
+            Reduce • Reuse • Recycle ♻️
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================
+         SCROLL TOP BUTTON
+         ========================= -->
+
+    <button id="topButton">
+        ↑
+    </button>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+         ========================= -->
+
+    <script>
+
+        // Get the button
+
+        const topButton =
+            document.getElementById("topButton");
+
+
+        // Show button when scrolling
+
+        window.addEventListener(
+            "scroll",
+            function () {
+
+                if (window.scrollY > 300) {
+
+                    topButton.style.display =
+                        "block";
+
+                }
+
+                else {
+
+                    topButton.style.display =
+                        "none";
+
+                }
+
+            }
+        );
+
+
+        // Scroll back to top
+
+        topButton.addEventListener(
+            "click",
+            function () {
+
+                window.scrollTo({
+
+                    top: 0,
+
+                    behavior: "smooth"
+
+                });
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>

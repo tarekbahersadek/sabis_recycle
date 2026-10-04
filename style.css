@@ -1,0 +1,213 @@
+header{
+    background-color: darkgreen;
+    background-attachment: fixed;
+}
+
+
+
+
+
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-inline: 40px;
+}
+
+.logo h1 .bigone{
+    color: blue;
+
+}
+
+.logo h1{
+    color: white;
+    font-weight: 1000px;
+    font-size: 40px;
+}
+
+.l{
+    color: blue;
+    
+
+}
+
+.s{
+    color: white;
+    border: solid 2px black;
+    border-radius: 15px;
+    box-shadow: 2px blue;
+}
+
+
+
+
+.links{
+    list-style: none;
+    gap: 30px;
+
+}
+
+.links a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 100px;
+    gap: 30px;
+    transition:color,1s;
+
+}
+
+.links a:hover{
+    color: blue;
+}
+
+
+    
+.wrapper a{
+    text-decoration: none;
+    color: blue;
+    background-color: white;
+    width: 50px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: x-large;
+    transition:color,1s;
+
+}
+
+.wrapper a:hover{
+    background-color: blue;
+    color: white;
+}
+
+
+
+
+
+
+.bodysec{
+    background-image:url(https://png.pngtree.com/thumb_back/fh260/background/20230627/pngtree-illustration-of-earth-preservation-3d-rendered-hand-holding-recycle-icon-image_3684729.jpg);
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 650px;
+    
+}
+
+.bodysec  h1{
+    color: white;
+    font-size: 40px;
+
+
+}
+
+.bodysec p{
+    color: white;
+    font-weight: 900;
+    font-size: large;
+}
+
+.bodysec .sec1{
+    display: flex;
+    flex-direction: column;
+    margin-inline: 40px;
+}
+
+.bodysec .sec2 h3{
+    color: white;
+    font-size: xx-large;
+}
+
+.bodysec .sec2{
+    margin-inline: 40px;
+}
+
+
+.bodysec .sec2 a{
+    text-decoration: none;
+    color: blue;
+    background-color: white;
+    width:50px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: x-large;
+    transition:color,1s;
+}
+
+.bodysec .sec2 #thesec1:hover{
+    background-color: blue;
+    color: white;
+}
+
+.bodysec .sec3 #thesec2{
+    text-decoration: none;
+    color: white;
+    background-color: purple;
+    border-radius: 5px;
+    font-size:x-large;
+    transition:color,1s;
+    
+    
+}
+
+.bodysec .sec3 h1{
+    color: white;
+
+}
+.bodysec .sec3 h3{
+    color: white;
+    font-size: larger;
+}
+
+.bodysec .sec3 #thesec2:hover{
+    background-color: white;
+    color: purple;
+}
+
+
+footer{
+    background-color:darkgreen;
+}
+
+footer .big .small h1{
+    color: white;
+}
+
+.re{
+    color: blue;
+}
+
+.sss{
+    color: white;
+    border: solid 1px black;
+    border-radius: 15px;
+    
+}
+
+.big{
+    margin-inline: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.big ul h3{
+    color: white;
+}
+
+.big .small p{
+    color: white;
+}
+
+
+
+
+
+
+

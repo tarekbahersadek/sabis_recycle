@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Sabis Recycle - What Is Recycling?</title>
+
+
+    <style>
+
+        /* =========================================
+           GENERAL
+        ========================================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #e8f5e9;
+            color: #222;
+        }
+
+
+        /* =========================================
+           HEADER
+        ========================================= */
+
+        header {
+            background-color: darkgreen;
+            padding: 10px 0;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            box-shadow:
+                0 3px 12px rgba(0, 0, 0, 0.25);
+        }
+
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            margin-inline: 40px;
+        }
+
+
+        .logo h1 {
+            color: white;
+            font-size: 40px;
+            font-weight: 900;
+            margin: 10px 0;
+        }
+
+
+        .bigone {
+            color: blue;
+        }
+
+
+        .s {
+            color: white;
+
+            border: solid 2px black;
+            border-radius: 15px;
+
+            padding: 2px 6px;
+        }
+
+
+        .l {
+            color: blue;
+        }
+
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+
+            font-size: 18px;
+
+            transition: 0.3s;
+        }
+
+
+        .nav-links a:hover {
+            color: #4da6ff;
+        }
+
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .hero {
+
+            min-height: 520px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 60px 20px;
+
+
+            background-image:
+
+                linear-gradient(
+                    rgba(0, 70, 0, 0.7),
+                    rgba(0, 70, 0, 0.7)
+                ),
+
+                url("https://png.pngtree.com/thumb_back/fh260/background/20230627/pngtree-illustration-of-earth-preservation-3d-rendered-hand-holding-recycle-icon-image_3684729.jpg");
+
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+
+        .hero h1 {
+            color: white;
+
+            font-size: 55px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .hero h1 span {
+            color: #4da6ff;
+        }
+
+
+        .hero p {
+            color: white;
+
+            font-size: 21px;
+
+            line-height: 1.7;
+
+            margin-bottom: 30px;
+        }
+
+
+        .hero-button {
+            display: inline-block;
+
+            text-decoration: none;
+
+            background: white;
+
+            color: darkgreen;
+
+            padding: 15px 30px;
+
+            border-radius: 10px;
+
+            font-weight: bold;
+
+            font-size: 18px;
+
+            transition: 0.3s;
+        }
+
+
+        .hero-button:hover {
+            background: blue;
+            color: white;
+
+            transform: scale(1.05);
+        }
+
+
+        /* =========================================
+           SECTIONS
+        ========================================= */
+
+        .section {
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding: 70px 20px;
+        }
+
+
+        .section-title {
+
+            text-align: center;
+
+            color: darkgreen;
+
+            font-size: 38px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .section-text {
+
+            max-width: 850px;
+
+            margin: auto;
+
+            text-align: center;
+
+            color: #555;
+
+            line-height: 1.8;
+
+            font-size: 18px;
+        }
+
+
+        /* =========================================
+           WHAT IS RECYCLING
+        ========================================= */
+
+        .definition {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 30px;
+
+            align-items: center;
+
+            margin-top: 45px;
+        }
+
+
+        .definition-card {
+
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 8px 25px
+                rgba(0, 0, 0, 0.12);
+        }
+
+
+        .definition-card h2 {
+
+            color: darkgreen;
+
+            font-size: 30px;
+        }
+
+
+        .definition-card p {
+
+            color: #555;
+
+            line-height: 1.7;
+
+            font-size: 17px;
+        }
+
+
+        .earth {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    darkgreen,
+                    #138a36
+                );
+
+            color: white;
+
+            min-height: 300px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            border-radius: 20px;
+
+            font-size: 100px;
+
+            box-shadow:
+                0 8px 25px
+                rgba(0, 0, 0, 0.2);
+        }
+
+
+        /* =========================================
+           WHY RECYCLE
+        ========================================= */
+
+        .why-section {
+
+            background-color: #dff0e2;
+
+            max-width: none;
+
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+
+
+        .benefits {
+
+            max-width: 1100px;
+
+            margin: 40px auto 0;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+
+        .benefit {
+
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 18px;
+
+            text-align: center;
+
+            box-shadow:
+                0 7px 20px
+                rgba(0, 0, 0, 0.1);
+
+            transition: 0.3s;
+        }
+
+
+        .benefit:hover {
+
+            transform: translateY(-7px);
+        }
+
+
+        .benefit-icon {
+
+            font-size: 50px;
+        }
+
+
+        .benefit h3 {
+
+            color: darkgreen;
+
+            font-size: 24px;
+        }
+
+
+        .benefit p {
+
+            color: #555;
+
+            line-height: 1.6;
+        }
+
+
+        /* =========================================
+           RECYCLING PROCESS
+        ========================================= */
+
+        .process {
+
+            margin-top: 45px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(5, 1fr);
+
+            gap: 15px;
+        }
+
+
+        .process-step {
+
+            background: white;
+
+            padding: 25px 15px;
+
+            border-radius: 15px;
+
+            text-align: center;
+
+            box-shadow:
+                0 5px 15px
+                rgba(0, 0, 0, 0.1);
+
+            position: relative;
+        }
+
+
+        .step-number {
+
+            width: 45px;
+            height: 45px;
+
+            margin: auto;
+
+            border-radius: 50%;
+
+            background: darkgreen;
+
+            color: white;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            font-weight: bold;
+
+            font-size: 18px;
+        }
+
+
+        .process-step h3 {
+
+            color: darkgreen;
+        }
+
+
+        .process-step p {
+
+            color: #555;
+
+            line-height: 1.5;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================================
+           3 RS
+        ========================================= */
+
+        .rs-box {
+
+            margin-top: 40px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+
+        .rs-card {
+
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 18px;
+
+            text-align: center;
+
+            border-top: 6px solid darkgreen;
+
+            box-shadow:
+                0 7px 20px
+                rgba(0, 0, 0, 0.1);
+
+            transition: 0.3s;
+        }
+
+
+        .rs-card:hover {
+
+            transform: translateY(-7px);
+        }
+
+
+        .rs-card .icon {
+
+            font-size: 50px;
+        }
+
+
+        .rs-card h3 {
+
+            color: darkgreen;
+
+            font-size: 27px;
+        }
+
+
+        .rs-card p {
+
+            color: #555;
+
+            line-height: 1.6;
+        }
+
+
+        /* =========================================
+           MYTH / FACT
+        ========================================= */
+
+        .fact-box {
+
+            max-width: 800px;
+
+            margin: 40px auto 0;
+
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 20px;
+
+            text-align: center;
+
+            box-shadow:
+                0 8px 25px
+                rgba(0, 0, 0, 0.15);
+        }
+
+
+        .fact-box h2 {
+
+            color: darkgreen;
+        }
+
+
+        #factText {
+
+            min-height: 55px;
+
+            color: #555;
+
+            line-height: 1.6;
+
+            font-size: 18px;
+        }
+
+
+        .fact-button {
+
+            border: none;
+
+            background: darkgreen;
+
+            color: white;
+
+            padding: 14px 25px;
+
+            border-radius: 10px;
+
+            font-size: 16px;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+
+        .fact-button:hover {
+
+            background: blue;
+
+            transform: scale(1.04);
+        }
+
+
+        /* =========================================
+           QUIZ CTA
+        ========================================= */
+
+        .cta {
+
+            background: darkgreen;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 70px 20px;
+        }
+
+
+        .cta h2 {
+
+            font-size: 38px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .cta p {
+
+            font-size: 18px;
+
+            margin-bottom: 30px;
+        }
+
+
+        .cta a {
+
+            display: inline-block;
+
+            text-decoration: none;
+
+            background: white;
+
+            color: darkgreen;
+
+            padding: 15px 30px;
+
+            border-radius: 10px;
+
+            font-weight: bold;
+
+            font-size: 18px;
+
+            transition: 0.3s;
+        }
+
+
+        .cta a:hover {
+
+            background: blue;
+
+            color: white;
+
+            transform: scale(1.05);
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+
+            background-color: #004d00;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px;
+        }
+
+
+        footer h2 {
+
+            margin: 0;
+
+            font-size: 30px;
+        }
+
+
+        footer p {
+
+            margin-bottom: 0;
+        }
+
+
+        .re {
+
+            color: blue;
+        }
+
+
+        .sss {
+
+            color: white;
+
+            border: solid 1px black;
+
+            border-radius: 15px;
+
+            padding: 2px 5px;
+        }
+
+
+        /* =========================================
+           TOP BUTTON
+        ========================================= */
+
+        #topButton {
+
+            position: fixed;
+
+            right: 25px;
+
+            bottom: 25px;
+
+            width: 50px;
+
+            height: 50px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: darkgreen;
+
+            color: white;
+
+            font-size: 22px;
+
+            cursor: pointer;
+
+            display: none;
+
+            z-index: 100;
+
+            transition: 0.3s;
+        }
+
+
+        #topButton:hover {
+
+            background: blue;
+
+            transform: scale(1.1);
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 850px) {
+
+            nav {
+
+                flex-direction: column;
+
+                gap: 10px;
+
+                margin-inline: 15px;
+            }
+
+
+            .logo h1 {
+
+                font-size: 32px;
+            }
+
+
+            .nav-links {
+
+                gap: 15px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+
+            .hero h1 {
+
+                font-size: 40px;
+            }
+
+
+            .definition {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .benefits {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .process {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .rs-box {
+
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            .hero h1 {
+
+                font-size: 32px;
+            }
+
+
+            .hero p {
+
+                font-size: 17px;
+            }
+
+
+            .section-title {
+
+                font-size: 30px;
+            }
+
+
+            .process {
+
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================= -->
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+
+                <h1>
+
+                    <span class="s">S</span>abis
+
+                    <span class="bigone">
+
+                        recyc<span class="l">l</span>e
+
+                    </span>
+
+                </h1>
+
+            </div>
+
+
+            <div class="nav-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="explore.html">
+                    Explore
+                </a>
+
+                <a href="ai.html">
+                    Ask AI
+                </a>
+
+                <a href="quiz.html">
+                    Quiz
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================================
+         HERO
+    ========================================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+
+                What Is
+                <span>Recycling?</span> ♻️
+
+            </h1>
+
+
+            <p>
+
+                Recycling is the process of collecting,
+                sorting, processing, and turning suitable
+                used materials into materials that can
+                be used again.
+
+            </p>
+
+
+            <a
+                href="#definition"
+                class="hero-button">
+
+                Learn More ↓
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         DEFINITION
+    ========================================= -->
+
+    <section
+        class="section"
+        id="definition">
+
+        <h2 class="section-title">
+
+            So... What Does Recycling Mean?
+
+        </h2>
+
+
+        <p class="section-text">
+
+            Recycling helps keep useful materials
+            in circulation instead of sending them
+            directly to disposal. Materials such as
+            paper, cardboard, metals, glass, and some
+            plastics may be collected and processed
+            depending on the local recycling system.
+
+        </p>
+
+
+        <div class="definition">
+
+
+            <div class="definition-card">
+
+                <h2>
+                    ♻️ Recycling
+                </h2>
+
+
+                <p>
+
+                    Imagine you have an old cardboard
+                    box. Instead of treating it as
+                    something that has no value, a
+                    recycling system can collect it,
+                    sort it, process it, and use its
+                    material to make new paper products.
+
+                </p>
+
+
+                <p>
+
+                    Recycling does not mean that every
+                    item can automatically go into a
+                    recycling bin. Different places
+                    accept different materials, so it
+                    is important to check local rules.
+
+                </p>
+
+            </div>
+
+
+            <div class="earth">
+
+                🌍♻️
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         WHY RECYCLE
+    ========================================= -->
+
+    <section class="section why-section">
+
+        <h2 class="section-title">
+
+            Why Is Recycling Important?
+
+        </h2>
+
+
+        <p class="section-text">
+
+            Recycling can be one part of responsible
+            waste management and resource conservation.
+
+        </p>
+
+
+        <div class="benefits">
+
+
+            <div class="benefit">
+
+                <div class="benefit-icon">
+                    🌳
+                </div>
+
+                <h3>
+                    Save Resources
+                </h3>
+
+                <p>
+
+                    Recycling can help keep useful
+                    materials in use and reduce the
+                    need for some new raw materials.
+
+                </p>
+
+            </div>
+
+
+            <div class="benefit">
+
+                <div class="benefit-icon">
+                    🗑️
+                </div>
+
+                <h3>
+                    Reduce Waste
+                </h3>
+
+                <p>
+
+                    Recycling suitable materials
+                    can reduce the amount of waste
+                    sent for disposal.
+
+                </p>
+
+            </div>
+
+
+            <div class="benefit">
+
+                <div class="benefit-icon">
+                    🌎
+                </div>
+
+                <h3>
+                    Help the Planet
+                </h3>
+
+                <p>
+
+                    Using resources more efficiently
+                    can support efforts to reduce the
+                    environmental impact of waste.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         PROCESS
+    ========================================= -->
+
+    <section class="section">
+
+        <h2 class="section-title">
+
+            How Does Recycling Work?
+
+        </h2>
+
+
+        <p class="section-text">
+
+            The exact process depends on the material
+            and local recycling system, but it often
+            includes several basic stages.
+
+        </p>
+
+
+        <div class="process">
+
+
+            <div class="process-step">
+
+                <div class="step-number">
+                    1
+                </div>
+
+                <h3>
+                    Collect
+                </h3>
+
+                <p>
+                    Recyclable materials are collected.
+                </p>
+
+            </div>
+
+
+            <div class="process-step">
+
+                <div class="step-number">
+                    2
+                </div>
+
+                <h3>
+                    Sort
+                </h3>
+
+                <p>
+                    Materials are separated by type.
+                </p>
+
+            </div>
+
+
+            <div class="process-step">
+
+                <div class="step-number">
+                    3
+                </div>
+
+                <h3>
+                    Process
+                </h3>
+
+                <p>
+                    Materials are cleaned and processed.
+                </p>
+
+            </div>
+
+
+            <div class="process-step">
+
+                <div class="step-number">
+                    4
+                </div>
+
+                <h3>
+                    Make
+                </h3>
+
+                <p>
+                    Recovered material is used in
+                    manufacturing.
+                </p>
+
+            </div>
+
+
+            <div class="process-step">
+
+                <div class="step-number">
+                    5
+                </div>
+
+                <h3>
+                    Reuse
+                </h3>
+
+                <p>
+                    New products are made available
+                    for use.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         3 Rs
+    ========================================= -->
+
+    <section class="section">
+
+        <h2 class="section-title">
+
+            Remember the 3 Rs
+
+        </h2>
+
+
+        <div class="rs-box">
+
+
+            <div class="rs-card">
+
+                <div class="icon">
+                    📉
+                </div>
+
+                <h3>
+                    Reduce
+                </h3>
+
+                <p>
+
+                    Try to create less waste by
+                    making thoughtful choices and
+                    avoiding unnecessary consumption.
+
+                </p>
+
+            </div>
+
+
+            <div class="rs-card">
+
+                <div class="icon">
+                    🔄
+                </div>
+
+                <h3>
+                    Reuse
+                </h3>
+
+                <p>
+
+                    Use suitable items again instead
+                    of throwing them away after one use.
+
+                </p>
+
+            </div>
+
+
+            <div class="rs-card">
+
+                <div class="icon">
+                    ♻️
+                </div>
+
+                <h3>
+                    Recycle
+                </h3>
+
+                <p>
+
+                    Recycle materials when they are
+                    accepted by your local recycling
+                    program.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         FACT BOX
+    ========================================= -->
+
+    <section class="section">
+
+        <h2 class="section-title">
+
+            Recycling Fact Machine 🤖
+
+        </h2>
+
+
+        <p class="section-text">
+
+            Click the button to discover a recycling fact!
+
+        </p>
+
+
+        <div class="fact-box">
+
+            <h2>
+                🌱 Did You Know?
+            </h2>
+
+
+            <p id="factText">
+
+                Click the button below to see a fact.
+
+            </p>
+
+
+            <button
+                class="fact-button"
+                id="factButton">
+
+                Show Me a Fact ♻️
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CTA
+    ========================================= -->
+
+    <section class="cta">
+
+        <h2>
+            Think You Know Recycling?
+        </h2>
+
+
+        <p>
+
+            Test what you learned with the
+            Sabis Recycle quiz!
+
+        </p>
+
+
+        <a href="quiz.html">
+
+            Take the Recycling Quiz 📝
+
+        </a>
+
+    </section>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================= -->
+
+    <footer>
+
+        <h2>
+
+            <span class="sss">S</span>abis
+
+            <span class="re">
+                recycle
+            </span>
+
+        </h2>
+
+
+        <p>
+            Reduce • Reuse • Recycle ♻️
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================================
+         TOP BUTTON
+    ========================================= -->
+
+    <button id="topButton">
+        ↑
+    </button>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================= -->
+
+    <script>
+
+
+        // =========================================
+        // RECYCLING FACT MACHINE
+        // =========================================
+
+        const facts = [
+
+            "Recycling can help keep useful materials in circulation instead of sending them directly to disposal.",
+
+            "Paper and cardboard are commonly recycled materials, although local recycling rules can differ.",
+
+            "Aluminum cans can be recycled in many recycling systems.",
+
+            "Glass bottles and jars can often be recycled where glass collection is available.",
+
+            "The 3 Rs are Reduce, Reuse, and Recycle.",
+
+            "Not every plastic item belongs in a recycling bin. Always check local recycling rules.",
+
+            "Keeping recyclable materials free from unwanted contamination can help the recycling process.",
+
+            "Reusing an item means using it again instead of immediately throwing it away.",
+
+            "Reducing waste means trying to create less waste in the first place."
+
+        ];
+
+
+        const factText =
+            document.getElementById("factText");
+
+
+        const factButton =
+            document.getElementById("factButton");
+
+
+        factButton.addEventListener(
+            "click",
+            function () {
+
+                const randomNumber =
+                    Math.floor(
+                        Math.random() * facts.length
+                    );
+
+
+                factText.innerText =
+                    facts[randomNumber];
+
+            }
+        );
+
+
+
+        // =========================================
+        // SCROLL TO TOP
+        // =========================================
+
+        const topButton =
+            document.getElementById(
+                "topButton"
+            );
+
+
+        window.addEventListener(
+            "scroll",
+            function () {
+
+                if (window.scrollY > 300) {
+
+                    topButton.style.display =
+                        "block";
+
+                }
+
+                else {
+
+                    topButton.style.display =
+                        "none";
+
+                }
+
+            }
+        );
+
+
+        topButton.addEventListener(
+            "click",
+            function () {
+
+                window.scrollTo({
+
+                    top: 0,
+
+                    behavior: "smooth"
+
+                });
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>

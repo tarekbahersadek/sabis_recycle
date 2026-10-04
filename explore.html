@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Sabis Recycle - Explore</title>
+
+
+    <!-- =========================
+         CSS
+         ========================= -->
+
+    <style>
+
+        /* =========================
+           GENERAL
+           ========================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+
+            font-family: Arial, sans-serif;
+
+            background-color: #e8f5e9;
+
+            color: #222;
+        }
+
+
+        /* =========================
+           HEADER
+           ========================= */
+
+        header {
+            background-color: darkgreen;
+
+            padding: 10px 0;
+
+            box-shadow:
+                0 3px 10px rgba(0, 0, 0, 0.2);
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+        }
+
+
+        nav {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            margin-inline: 40px;
+        }
+
+
+        /* =========================
+           LOGO
+           ========================= */
+
+        .logo h1 {
+            color: white;
+
+            font-size: 40px;
+
+            font-weight: 900;
+
+            margin: 10px 0;
+        }
+
+
+        .bigone {
+            color: blue;
+        }
+
+
+        .s {
+            color: white;
+
+            border: solid 2px black;
+
+            border-radius: 15px;
+
+            padding: 2px 6px;
+        }
+
+
+        .l {
+            color: blue;
+        }
+
+
+        /* =========================
+           NAVIGATION
+           ========================= */
+
+        .nav-links {
+            display: flex;
+
+            gap: 25px;
+        }
+
+
+        .nav-links a {
+            text-decoration: none;
+
+            color: white;
+
+            font-size: 18px;
+
+            transition: 0.3s;
+        }
+
+
+        .nav-links a:hover {
+            color: blue;
+        }
+
+
+        /* =========================
+           HERO
+           ========================= */
+
+        .hero {
+
+            min-height: 550px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            padding: 60px 20px;
+
+
+            background-image:
+
+                linear-gradient(
+                    rgba(0, 70, 0, 0.65),
+                    rgba(0, 70, 0, 0.65)
+                ),
+
+                url("https://png.pngtree.com/thumb_back/fh260/background/20230627/pngtree-illustration-of-earth-preservation-3d-rendered-hand-holding-recycle-icon-image_3684729.jpg");
+
+
+            background-position: center;
+
+            background-size: cover;
+
+            background-attachment: fixed;
+        }
+
+
+        .hero-box {
+            max-width: 850px;
+
+            color: white;
+        }
+
+
+        .hero-box h1 {
+            font-size: 55px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .hero-box h1 span {
+            color: #4da6ff;
+        }
+
+
+        .hero-box p {
+            font-size: 21px;
+
+            line-height: 1.6;
+
+            margin-bottom: 30px;
+        }
+
+
+        .hero-button {
+            display: inline-block;
+
+            text-decoration: none;
+
+            background-color: white;
+
+            color: darkgreen;
+
+            padding: 15px 30px;
+
+            border-radius: 10px;
+
+            font-size: 18px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+
+        .hero-button:hover {
+            background-color: blue;
+
+            color: white;
+
+            transform: scale(1.05);
+        }
+
+
+        /* =========================
+           GENERAL SECTION
+           ========================= */
+
+        .section {
+            padding: 70px 20px;
+
+            max-width: 1200px;
+
+            margin: auto;
+        }
+
+
+        .section-title {
+            text-align: center;
+
+            color: darkgreen;
+
+            font-size: 38px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .section-description {
+            text-align: center;
+
+            color: #555;
+
+            font-size: 18px;
+
+            max-width: 750px;
+
+            margin: 0 auto 40px;
+
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           3 Rs
+           ========================= */
+
+        .three-rs {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+
+        .r-card {
+
+            background-color: white;
+
+            padding: 30px;
+
+            border-radius: 20px;
+
+            text-align: center;
+
+            box-shadow:
+                0 8px 20px
+                rgba(0, 0, 0, 0.12);
+
+            transition: 0.3s;
+        }
+
+
+        .r-card:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 15px 30px
+                rgba(0, 0, 0, 0.2);
+        }
+
+
+        .r-icon {
+
+            font-size: 55px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .r-card h3 {
+
+            color: darkgreen;
+
+            font-size: 27px;
+
+            margin: 10px 0;
+        }
+
+
+        .r-card p {
+
+            color: #555;
+
+            line-height: 1.6;
+
+            font-size: 16px;
+        }
+
+
+        /* =========================
+           MATERIALS
+           ========================= */
+
+        .materials {
+
+            background-color: #dff0e2;
+
+            max-width: none;
+
+            padding-left: 5%;
+
+            padding-right: 5%;
+        }
+
+
+        .material-grid {
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .material-card {
+
+            background-color: white;
+
+            padding: 25px;
+
+            text-align: center;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 5px 15px
+                rgba(0, 0, 0, 0.1);
+
+            transition: 0.3s;
+        }
+
+
+        .material-card:hover {
+
+            transform: scale(1.04);
+
+            border: 2px solid darkgreen;
+        }
+
+
+        .material-card .icon {
+
+            font-size: 45px;
+        }
+
+
+        .material-card h3 {
+
+            color: darkgreen;
+
+            margin-bottom: 8px;
+        }
+
+
+        .material-card p {
+
+            color: #555;
+
+            line-height: 1.5;
+        }
+
+
+        /* =========================
+           TIPS
+           ========================= */
+
+        .tips {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 20px;
+
+            max-width: 900px;
+
+            margin: auto;
+        }
+
+
+        .tip {
+
+            background-color: white;
+
+            padding: 22px;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 5px 15px
+                rgba(0, 0, 0, 0.1);
+
+            display: flex;
+
+            gap: 15px;
+
+            align-items: flex-start;
+        }
+
+
+        .tip-number {
+
+            background-color: darkgreen;
+
+            color: white;
+
+            min-width: 40px;
+
+            height: 40px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-weight: bold;
+        }
+
+
+        .tip p {
+
+            margin: 0;
+
+            color: #444;
+
+            line-height: 1.5;
+        }
+
+
+        /* =========================
+           SORTING GAME
+           ========================= */
+
+        .game-section {
+
+            background-color: darkgreen;
+
+            max-width: none;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 70px 20px;
+        }
+
+
+        .game-section .section-title {
+
+            color: white;
+        }
+
+
+        .game-section .section-description {
+
+            color: #d8eadb;
+        }
+
+
+        .game-box {
+
+            max-width: 750px;
+
+            margin: auto;
+
+            background-color: white;
+
+            color: #222;
+
+            padding: 35px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 10px 30px
+                rgba(0, 0, 0, 0.3);
+        }
+
+
+        .item-display {
+
+            font-size: 24px;
+
+            font-weight: bold;
+
+            color: darkgreen;
+
+            margin-bottom: 25px;
+        }
+
+
+        .bin-buttons {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .bin-button {
+
+            border: none;
+
+            padding: 15px 25px;
+
+            border-radius: 10px;
+
+            color: white;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+
+        .bin-button:hover {
+
+            transform: scale(1.05);
+        }
+
+
+        .recycle-bin {
+
+            background-color: #1976d2;
+        }
+
+
+        .general-bin {
+
+            background-color: #555;
+        }
+
+
+        .compost-bin {
+
+            background-color: #795548;
+        }
+
+
+        #gameMessage {
+
+            font-size: 18px;
+
+            font-weight: bold;
+
+            margin-top: 25px;
+
+            min-height: 25px;
+        }
+
+
+        #gameScore {
+
+            color: darkgreen;
+
+            font-weight: bold;
+
+            margin-top: 15px;
+        }
+
+
+        /* =========================
+           CALL TO ACTION
+           ========================= */
+
+        .cta {
+
+            text-align: center;
+
+            padding: 70px 20px;
+
+            background-color: #e8f5e9;
+        }
+
+
+        .cta h2 {
+
+            color: darkgreen;
+
+            font-size: 38px;
+        }
+
+
+        .cta p {
+
+            color: #555;
+
+            font-size: 18px;
+
+            margin-bottom: 30px;
+        }
+
+
+        .cta-buttons {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .cta-buttons a {
+
+            text-decoration: none;
+
+            padding: 14px 25px;
+
+            border-radius: 10px;
+
+            font-size: 17px;
+
+            transition: 0.3s;
+        }
+
+
+        .ai-button {
+
+            background-color: darkgreen;
+
+            color: white;
+        }
+
+
+        .quiz-button {
+
+            background-color: blue;
+
+            color: white;
+        }
+
+
+        .cta-buttons a:hover {
+
+            transform: scale(1.05);
+        }
+
+
+        /* =========================
+           FOOTER
+           ========================= */
+
+        footer {
+
+            background-color: darkgreen;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px;
+        }
+
+
+        footer h2 {
+
+            margin: 0;
+
+            font-size: 30px;
+        }
+
+
+        footer p {
+
+            margin-bottom: 0;
+        }
+
+
+        .re {
+
+            color: blue;
+        }
+
+
+        .sss {
+
+            color: white;
+
+            border: solid 1px black;
+
+            border-radius: 15px;
+
+            padding: 2px 5px;
+        }
+
+
+        /* =========================
+           TOP BUTTON
+           ========================= */
+
+        #topButton {
+
+            position: fixed;
+
+            right: 25px;
+
+            bottom: 25px;
+
+            width: 50px;
+
+            height: 50px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background-color: darkgreen;
+
+            color: white;
+
+            font-size: 22px;
+
+            cursor: pointer;
+
+            display: none;
+
+            z-index: 100;
+
+            transition: 0.3s;
+        }
+
+
+        #topButton:hover {
+
+            background-color: blue;
+
+            transform: scale(1.1);
+        }
+
+
+        /* =========================
+           MOBILE
+           ========================= */
+
+        @media (max-width: 800px) {
+
+            nav {
+
+                flex-direction: column;
+
+                gap: 15px;
+
+                margin-inline: 15px;
+            }
+
+
+            .logo h1 {
+
+                font-size: 32px;
+            }
+
+
+            .nav-links {
+
+                gap: 15px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+
+            .hero-box h1 {
+
+                font-size: 40px;
+            }
+
+
+            .three-rs {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .material-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .tips {
+
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            .hero-box h1 {
+
+                font-size: 32px;
+            }
+
+
+            .hero-box p {
+
+                font-size: 17px;
+            }
+
+
+            .section-title {
+
+                font-size: 30px;
+            }
+
+
+            .material-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .game-box {
+
+                padding: 25px 15px;
+            }
+
+
+            .bin-buttons {
+
+                flex-direction: column;
+            }
+
+
+            .bin-button {
+
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+         ========================= -->
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+
+                <h1>
+
+                    <span class="s">S</span>abis
+
+                    <span class="bigone">
+
+                        recyc<span class="l">l</span>e
+
+                    </span>
+
+                </h1>
+
+            </div>
+
+
+            <div class="nav-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="ai.html">
+                    Ask AI
+                </a>
+
+                <a href="quiz.html">
+                    Quiz
+                </a>
+
+                <a href="video.html">
+                    Video
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         HERO
+         ========================= -->
+
+    <section class="hero">
+
+        <div class="hero-box">
+
+            <h1>
+
+                Explore the
+                <span>Recycle World</span> ♻️
+
+            </h1>
+
+
+            <p>
+
+                Learn how recycling works, discover
+                what materials can be recycled, and
+                find simple ways to protect our planet.
+
+            </p>
+
+
+            <a
+                href="#threeRs"
+                class="hero-button">
+
+                Start Exploring ↓
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         3 Rs
+         ========================= -->
+
+    <section
+        class="section"
+        id="threeRs">
+
+        <h2 class="section-title">
+
+            The 3 Rs ♻️
+
+        </h2>
+
+
+        <p class="section-description">
+
+            The easiest way to remember responsible
+            waste management is the 3 Rs:
+            Reduce, Reuse, and Recycle.
+
+        </p>
+
+
+        <div class="three-rs">
+
+
+            <div class="r-card">
+
+                <div class="r-icon">
+                    📉
+                </div>
+
+                <h3>
+                    Reduce
+                </h3>
+
+                <p>
+
+                    Use fewer resources and create
+                    less waste. Think before buying
+                    something you do not really need.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="r-card">
+
+                <div class="r-icon">
+                    🔄
+                </div>
+
+                <h3>
+                    Reuse
+                </h3>
+
+                <p>
+
+                    Use items again instead of
+                    throwing them away. A reusable
+                    bottle is a great example.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="r-card">
+
+                <div class="r-icon">
+                    ♻️
+                </div>
+
+                <h3>
+                    Recycle
+                </h3>
+
+                <p>
+
+                    Put suitable materials into the
+                    correct recycling system so they
+                    can potentially become new products.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         MATERIALS
+         ========================= -->
+
+    <section class="section materials">
+
+        <h2 class="section-title">
+
+            What Can Be Recycled?
+
+        </h2>
+
+
+        <p class="section-description">
+
+            Recycling rules can differ by location,
+            but these materials are commonly
+            recyclable in many systems.
+
+        </p>
+
+
+        <div class="material-grid">
+
+
+            <div class="material-card">
+
+                <div class="icon">
+                    📄
+                </div>
+
+                <h3>
+                    Paper
+                </h3>
+
+                <p>
+                    Clean paper and many paper
+                    products can be recyclable.
+                </p>
+
+            </div>
+
+
+
+            <div class="material-card">
+
+                <div class="icon">
+                    📦
+                </div>
+
+                <h3>
+                    Cardboard
+                </h3>
+
+                <p>
+                    Clean cardboard boxes are
+                    commonly accepted.
+                </p>
+
+            </div>
+
+
+
+            <div class="material-card">
+
+                <div class="icon">
+                    🥫
+                </div>
+
+                <h3>
+                    Metal
+                </h3>
+
+                <p>
+                    Aluminum and steel cans are
+                    commonly recyclable.
+                </p>
+
+            </div>
+
+
+
+            <div class="material-card">
+
+                <div class="icon">
+                    🍾
+                </div>
+
+                <h3>
+                    Glass
+                </h3>
+
+                <p>
+                    Glass bottles and jars can often
+                    be recycled where glass collection
+                    is available.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         RECYCLING TIPS
+         ========================= -->
+
+    <section class="section">
+
+        <h2 class="section-title">
+
+            Recycling Tips 🌱
+
+        </h2>
+
+
+        <p class="section-description">
+
+            Small actions can make a difference.
+            Try these habits at school and at home.
+
+        </p>
+
+
+        <div class="tips">
+
+
+            <div class="tip">
+
+                <div class="tip-number">
+                    1
+                </div>
+
+                <p>
+                    Use a reusable water bottle instead
+                    of buying disposable bottles.
+                </p>
+
+            </div>
+
+
+
+            <div class="tip">
+
+                <div class="tip-number">
+                    2
+                </div>
+
+                <p>
+                    Reuse school supplies whenever
+                    they are still useful.
+                </p>
+
+            </div>
+
+
+
+            <div class="tip">
+
+                <div class="tip-number">
+                    3
+                </div>
+
+                <p>
+                    Keep recyclable materials clean
+                    and dry when required by your
+                    local recycling system.
+                </p>
+
+            </div>
+
+
+
+            <div class="tip">
+
+                <div class="tip-number">
+                    4
+                </div>
+
+                <p>
+                    Check your local recycling rules
+                    if you are unsure about an item.
+                </p>
+
+            </div>
+
+
+
+            <div class="tip">
+
+                <div class="tip-number">
+                    5
+                </div>
+
+                <p>
+                    Avoid unnecessary packaging when
+                    you have a choice.
+                </p>
+
+            </div>
+
+
+
+            <div class="tip">
+
+                <div class="tip-number">
+                    6
+                </div>
+
+                <p>
+                    Remember: Reduce, Reuse, Recycle!
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         SORTING GAME
+         ========================= -->
+
+    <section class="game-section">
+
+        <h2 class="section-title">
+
+            ♻️ Recycling Sorting Game
+
+        </h2>
+
+
+        <p class="section-description">
+
+            Can you put each item in the right place?
+
+        </p>
+
+
+        <div class="game-box">
+
+
+            <div
+                class="item-display"
+                id="itemDisplay">
+
+                Loading...
+
+            </div>
+
+
+            <div class="bin-buttons">
+
+
+                <button
+                    class="bin-button recycle-bin"
+                    onclick="chooseBin('recycle')">
+
+                    ♻️ Recycling Bin
+
+                </button>
+
+
+                <button
+                    class="bin-button general-bin"
+                    onclick="chooseBin('general')">
+
+                    🗑️ General Waste
+
+                </button>
+
+
+                <button
+                    class="bin-button compost-bin"
+                    onclick="chooseBin('compost')">
+
+                    🌱 Compost
+
+                </button>
+
+
+            </div>
+
+
+            <p id="gameMessage"></p>
+
+
+            <p id="gameScore">
+                Score: 0
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CALL TO ACTION
+         ========================= -->
+
+    <section class="cta">
+
+        <h2>
+            Ready for More? 🚀
+        </h2>
+
+
+        <p>
+            Ask our recycling AI a question or
+            test yourself with the recycling quiz.
+        </p>
+
+
+        <div class="cta-buttons">
+
+
+            <a
+                href="ai.html"
+                class="ai-button">
+
+                🤖 Ask AI
+
+            </a>
+
+
+            <a
+                href="quiz.html"
+                class="quiz-button">
+
+                📝 Take Quiz
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
+
+    <footer>
+
+        <h2>
+
+            <span class="sss">S</span>abis
+
+            <span class="re">
+                recycle
+            </span>
+
+        </h2>
+
+
+        <p>
+            Reduce • Reuse • Recycle ♻️
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================
+         TOP BUTTON
+         ========================= -->
+
+    <button id="topButton">
+        ↑
+    </button>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+         ========================= -->
+
+    <script>
+
+
+        // ==========================================
+        // RECYCLING SORTING GAME
+        // ==========================================
+
+
+        const items = [
+
+            {
+                name: "📦 Cardboard box",
+                correct: "recycle"
+            },
+
+            {
+                name: "🍌 Banana peel",
+                correct: "compost"
+            },
+
+            {
+                name: "🥫 Aluminum can",
+                correct: "recycle"
+            },
+
+            {
+                name: "🍾 Glass bottle",
+                correct: "recycle"
+            },
+
+            {
+                name: "🍎 Apple core",
+                correct: "compost"
+            },
+
+            {
+                name: "🧻 Dirty tissue",
+                correct: "general"
+            },
+
+            {
+                name: "📄 Clean paper",
+                correct: "recycle"
+            },
+
+            {
+                name: "🥕 Vegetable scraps",
+                correct: "compost"
+            },
+
+            {
+                name: "🗑️ Broken dirty item",
+                correct: "general"
+            },
+
+            {
+                name: "📚 Old clean cardboard",
+                correct: "recycle"
+            }
+
+        ];
+
+
+        let currentItem = 0;
+
+        let gameScore = 0;
+
+
+        const itemDisplay =
+            document.getElementById(
+                "itemDisplay"
+            );
+
+
+        const gameMessage =
+            document.getElementById(
+                "gameMessage"
+            );
+
+
+        const gameScoreDisplay =
+            document.getElementById(
+                "gameScore"
+            );
+
+
+        // ==========================================
+        // SHOW ITEM
+        // ==========================================
+
+        function showItem() {
+
+            if (
+                currentItem >= items.length
+            ) {
+
+                itemDisplay.innerText =
+                    "🎉 Game Complete!";
+
+                gameMessage.innerText =
+                    "You scored " +
+                    gameScore +
+                    " out of " +
+                    items.length +
+                    "!";
+
+                gameScoreDisplay.innerText =
+                    "Final Score: " +
+                    gameScore +
+                    " / " +
+                    items.length;
+
+                return;
+            }
+
+
+            itemDisplay.innerText =
+                "Where should this go? " +
+                items[currentItem].name;
+
+
+            gameMessage.innerText =
+                "";
+
+        }
+
+
+        // ==========================================
+        // CHOOSE BIN
+        // ==========================================
+
+        function chooseBin(bin) {
+
+            if (
+                currentItem >= items.length
+            ) {
+                return;
+            }
+
+
+            const correctBin =
+                items[currentItem].correct;
+
+
+            if (bin === correctBin) {
+
+                gameScore++;
+
+
+                gameMessage.innerText =
+                    "✅ Correct! Great job!";
+
+
+                gameMessage.style.color =
+                    "green";
+
+            }
+
+            else {
+
+                gameMessage.innerText =
+                    "❌ Not quite. Try to remember the correct bin!";
+
+
+                gameMessage.style.color =
+                    "red";
+
+            }
+
+
+            gameScoreDisplay.innerText =
+                "Score: " +
+                gameScore;
+
+
+            currentItem++;
+
+
+            setTimeout(
+                showItem,
+                900
+            );
+
+        }
+
+
+        // Start game
+
+        showItem();
+
+
+
+        // ==========================================
+        // SCROLL TO TOP
+        // ==========================================
+
+        const topButton =
+            document.getElementById(
+                "topButton"
+            );
+
+
+        window.addEventListener(
+            "scroll",
+            function () {
+
+                if (
+                    window.scrollY > 300
+                ) {
+
+                    topButton.style.display =
+                        "block";
+
+                }
+
+                else {
+
+                    topButton.style.display =
+                        "none";
+
+                }
+
+            }
+        );
+
+
+        topButton.addEventListener(
+            "click",
+            function () {
+
+                window.scrollTo({
+
+                    top: 0,
+
+                    behavior: "smooth"
+
+                });
+
+            }
+        );
+
+
+    </script>
+
+
+</body>
+
+</html>
