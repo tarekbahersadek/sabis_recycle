@@ -1,0 +1,245 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #111827, #312e81);
+
+    font-family: Arial, sans-serif;
+}
+
+.piano-container {
+    width: 95%;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #dddddd;
+    font-size: 17px;
+}
+
+
+/* ============================= */
+/* PIANO BOX */
+/* ============================= */
+
+.piano {
+    width: 95vw;
+
+    margin: 30px auto;
+
+    padding: 20px;
+
+    background: #090909;
+
+    border-radius: 15px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+
+/* ============================= */
+/* KEYS */
+/* ============================= */
+
+.keys {
+    position: relative;
+
+    display: flex;
+
+    width: max-content;
+
+    height: 350px;
+
+    /* IMPORTANT */
+    min-width: 3355px;
+}
+
+
+/* ============================= */
+/* WHITE KEYS */
+/* ============================= */
+
+.white {
+    position: relative;
+
+    width: 55px;
+    height: 350px;
+
+    flex-shrink: 0;
+
+    background: white;
+
+    border: 2px solid #222;
+
+    border-radius: 0 0 7px 7px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-end;
+
+    padding-bottom: 20px;
+
+    color: #222;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    user-select: none;
+
+    z-index: 1;
+
+    transition: 0.08s;
+}
+
+
+/* White key hover */
+
+.white:hover {
+    background: #eeeeee;
+}
+
+
+/* White key pressed */
+
+.white.active {
+    background: #aaaaaa;
+
+    transform: translateY(5px);
+}
+
+
+/* ============================= */
+/* BLACK KEYS */
+/* ============================= */
+
+.black {
+    position: absolute;
+
+    top: 0;
+
+    width: 36px;
+    height: 215px;
+
+    background: linear-gradient(
+        to right,
+        #050505,
+        #333333,
+        #050505
+    );
+
+    border: 2px solid #000;
+
+    border-radius: 0 0 6px 6px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-end;
+
+    padding-bottom: 12px;
+
+    color: white;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    user-select: none;
+
+    z-index: 10;
+
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6);
+
+    transition: 0.08s;
+}
+
+
+/* Black hover */
+
+.black:hover {
+    background: #444;
+}
+
+
+/* Black pressed */
+
+.black.active {
+    background: #000;
+
+    transform: translateY(5px);
+}
+
+
+/* ============================= */
+/* INSTRUCTIONS */
+/* ============================= */
+
+.instructions {
+    margin-top: 20px;
+
+    color: white;
+}
+
+
+/* ============================= */
+/* SCROLLBAR */
+/* ============================= */
+
+.piano::-webkit-scrollbar {
+    height: 14px;
+}
+
+.piano::-webkit-scrollbar-track {
+    background: #222;
+}
+
+.piano::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 10px;
+}
+
+.piano::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media (max-width: 700px) {
+
+    .piano {
+        width: 95vw;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+}

@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Piano Masters AI</title>
+
+    <!-- Main AI CSS -->
+    <link
+        rel="stylesheet"
+        href="ai.css"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header>
+
+        <nav>
+
+            <!-- LOGO -->
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+
+                <h1>
+                    Piano <span>Masters</span>
+                </h1>
+
+                <img
+                    src="icons/keyboard-piano-synth-midi-vst-svgrepo-com.svg"
+                    alt="Piano keyboard"
+                >
+
+            </a>
+
+
+            <!-- NAVIGATION -->
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="mypiano.html">
+                        Keyboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="music.html">
+                        Music
+                    </a>
+                </li>
+
+                <li>
+                    <a href="notes.html">
+                        Notes
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <!-- SIGN OUT -->
+
+            <button
+                type="button"
+                class="header-signout"
+                onclick="signOut()"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Sign Out
+
+            </button>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================================
+         MAIN AI PAGE
+    ========================================== -->
+
+    <main class="ai-page">
+
+
+        <!-- =====================================
+             AI HEADER
+        ====================================== -->
+
+        <section class="ai-container">
+
+
+            <div class="ai-header">
+
+
+                <!-- AI TITLE -->
+
+                <div class="ai-title">
+
+                    <div class="ai-icon">
+
+                        <i class="fa-solid fa-robot"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h1>
+                            Piano Masters AI
+                        </h1>
+
+                        <p>
+                            Your personal piano learning assistant
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ONLINE STATUS -->
+
+                <div class="online">
+
+                    <span class="online-dot"></span>
+
+                    Online
+
+                </div>
+
+
+                <!-- AI CONTROLS -->
+
+                <div class="ai-controls">
+
+
+                    <!-- VOICE -->
+
+                    <button
+                        type="button"
+                        id="voiceButton"
+                        class="voice-button"
+                        onclick="toggleVoice()"
+                        title="Turn AI voice on or off"
+                    >
+
+                        <i class="fa-solid fa-volume-high"></i>
+
+                        <span>
+                            Voice On
+                        </span>
+
+                    </button>
+
+
+                    <!-- NEW CHAT -->
+
+                    <button
+                        type="button"
+                        class="new-chat-button"
+                        onclick="newChat()"
+                        title="Start a new chat"
+                    >
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        <span>
+                            New Chat
+                        </span>
+
+                    </button>
+
+
+                    <!-- SIGN OUT -->
+
+                    <button
+                        type="button"
+                        class="signout-button"
+                        onclick="signOut()"
+                        title="Sign out"
+                    >
+
+                        <i class="fa-solid fa-right-from-bracket"></i>
+
+                        <span>
+                            Sign Out
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 CHAT AREA
+            ====================================== -->
+
+            <div
+                class="chat-area"
+                id="chatArea"
+            >
+
+
+                <!-- WELCOME MESSAGE -->
+
+                <div class="message ai-message">
+
+
+                    <div class="message-icon">
+
+                        <i class="fa-solid fa-robot"></i>
+
+                    </div>
+
+
+                    <div class="message-content">
+
+                        <div class="message-name">
+                            Piano Masters AI
+                        </div>
+
+                        <p>
+                            Hello! 🎹 I'm Piano Masters AI.
+                            I'm here to help you learn piano,
+                            music theory, notes, chords, scales,
+                            and much more.
+                        </p>
+
+                        <p>
+                            You can type your question or
+                            press the microphone and talk to me.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SUGGESTIONS -->
+
+                <div class="suggestions">
+
+                    <button
+                        type="button"
+                        onclick="askQuestion('Teach me the piano notes')"
+                    >
+
+                        <i class="fa-solid fa-music"></i>
+
+                        Learn piano notes
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        onclick="askQuestion('How do I play a C major chord?')"
+                    >
+
+                        <i class="fa-solid fa-piano-keyboard"></i>
+
+                        C major chord
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        onclick="askQuestion('Teach me the C major scale')"
+                    >
+
+                        <i class="fa-solid fa-list"></i>
+
+                        C major scale
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        onclick="askQuestion('Give me a piano exercise for beginners')"
+                    >
+
+                        <i class="fa-solid fa-dumbbell"></i>
+
+                        Practice exercise
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 INPUT AREA
+            ====================================== -->
+
+            <div class="chat-input-wrapper">
+
+
+                <div class="chat-input-area">
+
+
+                    <!-- NEW CHAT -->
+
+                    <button
+                        type="button"
+                        class="clear-button"
+                        onclick="newChat()"
+                        title="New Chat"
+                    >
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </button>
+
+
+                    <!-- MESSAGE INPUT -->
+
+                    <input
+                        type="text"
+                        id="messageInput"
+                        placeholder="Ask Piano Masters AI..."
+                        autocomplete="off"
+                        aria-label="Message"
+                    >
+
+
+                    <!-- MICROPHONE -->
+
+                    <button
+                        type="button"
+                        class="mic-button"
+                        id="micButton"
+                        onclick="toggleMicrophone()"
+                        title="Talk to Piano Masters AI"
+                    >
+
+                        <i class="fa-solid fa-microphone"></i>
+
+                    </button>
+
+
+                    <!-- SEND -->
+
+                    <button
+                        type="button"
+                        class="send-button"
+                        onclick="sendMessage()"
+                        title="Send message"
+                    >
+
+                        <i class="fa-solid fa-paper-plane"></i>
+
+                    </button>
+
+                </div>
+
+
+                <!-- MIC INFORMATION -->
+
+                <div class="input-info">
+
+                    <span>
+
+                        <i class="fa-solid fa-microphone"></i>
+
+                        Press the microphone to talk
+
+                    </span>
+
+                    <span>
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        Piano Masters AI
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             FEATURES
+        ====================================== -->
+
+        <section class="ai-features">
+
+
+            <div class="ai-feature">
+
+                <div class="feature-icon pink">
+
+                    <i class="fa-solid fa-brain"></i>
+
+                </div>
+
+                <h3>
+                    Smart Piano Tutor
+                </h3>
+
+                <p>
+                    Ask questions about piano,
+                    music theory, chords, scales,
+                    and technique.
+                </p>
+
+            </div>
+
+
+            <div class="ai-feature">
+
+                <div class="feature-icon purple">
+
+                    <i class="fa-solid fa-microphone"></i>
+
+                </div>
+
+                <h3>
+                    Talk to AI
+                </h3>
+
+                <p>
+                    Use your microphone to speak
+                    naturally with your piano tutor.
+                </p>
+
+            </div>
+
+
+            <div class="ai-feature">
+
+                <div class="feature-icon blue">
+
+                    <i class="fa-solid fa-volume-high"></i>
+
+                </div>
+
+                <h3>
+                    AI Voice
+                </h3>
+
+                <p>
+                    Turn voice responses on or off
+                    whenever you want.
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+
+
+        <div class="footer-brand">
+
+            <h2>
+                Piano <span>Masters</span>
+            </h2>
+
+            <p>
+                Learn. Play. Create.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Piano Masters AI
+            </h3>
+
+            <p>
+                Your personal piano learning assistant.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <p>
+                <a href="mypiano.html">
+                    Keyboard
+                </a>
+            </p>
+
+            <p>
+                <a href="notes.html">
+                    Notes
+                </a>
+            </p>
+
+            <p>
+                <a href="music.html">
+                    Music
+                </a>
+            </p>
+
+        </div>
+
+
+        <div class="social">
+
+            <h3>
+                Follow Us
+            </h3>
+
+            <div class="social-icons">
+
+                <a
+                    href="https://www.facebook.com/"
+                    aria-label="Facebook"
+                >
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a
+                    href="#"
+                    aria-label="TikTok"
+                >
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+                <a
+                    href="#"
+                    aria-label="X"
+                >
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+                <a
+                    href="#"
+                    aria-label="YouTube"
+                >
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+
+                Made with
+
+                <i class="fa-solid fa-heart"></i>
+
+                by Tarek Sadek
+
+            </p>
+
+        </div>
+
+
+    </footer>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="ai.js"></script>
+
+
+</body>
+
+</html>
+

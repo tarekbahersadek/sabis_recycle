@@ -1,0 +1,328 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Join Piano Masters</title>
+
+    <link rel="stylesheet" href="sign.css">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+</head>
+
+
+<body class="signup-body">
+
+    <main class="signup-page">
+
+        <!-- Background decoration -->
+        <div class="signup-glow signup-glow-pink"></div>
+        <div class="signup-glow signup-glow-purple"></div>
+
+
+        <section class="signup-wrapper">
+
+
+            <!-- =========================
+                 LEFT SIDE
+            ========================== -->
+
+            <div class="signup-intro">
+
+                <a href="index.html" class="signup-logo">
+                    Piano <span>Masters</span>
+                </a>
+
+
+                <div class="intro-content">
+
+                    <span class="intro-tag">
+                        <i class="fa-solid fa-music"></i>
+                        YOUR MUSICAL JOURNEY
+                    </span>
+
+                    <h1>
+                        Learn piano.
+                        <br>
+                        <span>Play your way.</span>
+                    </h1>
+
+                    <p>
+                        Create your Piano Masters account and
+                        unlock a simple, fun way to learn,
+                        practice, and make music.
+                    </p>
+
+
+                    <div class="intro-points">
+
+                        <div class="intro-point">
+                            <div class="intro-point-icon pink">
+                                <i class="fa-solid fa-piano"></i>
+                            </div>
+
+                            <div>
+                                <strong>
+                                    Interactive Piano
+                                </strong>
+
+                                <span>
+                                    Play directly in your browser
+                                </span>
+                            </div>
+                        </div>
+
+
+                        <div class="intro-point">
+                            <div class="intro-point-icon purple">
+                                <i class="fa-solid fa-music"></i>
+                            </div>
+
+                            <div>
+                                <strong>
+                                    Learn Notes
+                                </strong>
+
+                                <span>
+                                    Understand the keyboard step by step
+                                </span>
+                            </div>
+                        </div>
+
+
+                        <div class="intro-point">
+                            <div class="intro-point-icon blue">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+
+                            <div>
+                                <strong>
+                                    Improve Every Day
+                                </strong>
+
+                                <span>
+                                    Practice and build your skills
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <p class="intro-footer">
+                    Learn. Play. Create.
+                </p>
+
+            </div>
+
+
+            <!-- =========================
+                 SIGN UP CARD
+            ========================== -->
+
+            <div class="signup-card">
+
+                <div class="signup-card-top">
+
+                    <div class="signup-icon">
+                        <i class="fa-solid fa-user-plus"></i>
+                    </div>
+
+                    <div>
+                        <h2>
+                            Create your account
+                        </h2>
+
+                        <p>
+                            Start your piano journey today.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <form class="signup-form">
+
+
+                    <!-- NAME -->
+
+                    <div class="form-group">
+
+                        <label for="fullname">
+                            Full Name
+                        </label>
+
+                        <div class="form-input">
+
+                            <i class="fa-regular fa-user"></i>
+
+                            <input
+                                type="text"
+                                id="fullname"
+                                name="fullname"
+                                placeholder="Your full name"
+                                autocomplete="name"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <div class="form-input">
+
+                            <i class="fa-regular fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="you@example.com"
+                                autocomplete="email"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="form-group">
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                        <div class="form-input">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Create a password"
+                                autocomplete="new-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                aria-label="Show password"
+                            >
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PASSWORD HINT -->
+
+                    <div class="password-hint">
+                        <span></span>
+                        Use at least 8 characters
+                    </div>
+
+
+                    <!-- TERMS -->
+
+                    <label class="terms-check">
+
+                        <input
+                            type="checkbox"
+                            required
+                        >
+
+                        <span class="custom-checkbox">
+                            <i class="fa-solid fa-check"></i>
+                        </span>
+
+                        <p>
+                            I agree to the
+                            <a href="#">
+                                Terms & Conditions
+                            </a>
+                            and
+                            <a href="#">
+                                Privacy Policy
+                            </a>.
+                        </p>
+
+                    </label>
+
+
+                    <!-- SUBMIT -->
+
+                    <button
+                        type="submit"
+                        class="signup-submit"
+                    >
+                        <span>
+                            Create Account
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </form>
+
+
+                <!-- LOGIN -->
+
+                <div class="already-account">
+
+                    <span>
+                        Already have an account?
+                    </span>
+
+                    <a href="#">
+                        Log in
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    
+    <a href="index.html">home</a>
+
+
+    <script src="sign.js"></script>
+    <script src="signup.js"></script>
+
+</body>
+
+</html>
+```
+

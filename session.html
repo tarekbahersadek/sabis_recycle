@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Coach Ahmed | Piano Masters</title>
+
+    <link
+        rel="stylesheet"
+        href="session.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header>
+
+        <nav>
+
+            <!-- LOGO -->
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+
+                <h1>
+                    Piano <span>Masters</span>
+                </h1>
+
+                <img
+                    src="icons/keyboard-piano-synth-midi-vst-svgrepo-com.svg"
+                    alt="Piano keyboard"
+                >
+
+            </a>
+
+
+
+            <!-- NAVIGATION -->
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="mypiano.html">
+                        Keyboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="music.html">
+                        Music
+                    </a>
+                </li>
+
+                <li>
+                    <a href="notes.html">
+                        Notes
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="session.html"
+                        class="active"
+                    >
+                        Sessions
+                    </a>
+                </li>
+
+            </ul>
+
+
+
+            <!-- SIGN OUT -->
+
+            <button
+                type="button"
+                class="header-signout"
+                onclick="signOut()"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Sign Out
+
+            </button>
+
+        </nav>
+
+    </header>
+
+
+
+
+
+    <!-- =========================================
+         MAIN
+    ========================================== -->
+
+    <main class="sessions-page">
+
+
+
+        <!-- =====================================
+             HERO
+        ====================================== -->
+
+        <section class="sessions-hero">
+
+            <div class="hero-text">
+
+                <span class="hero-label">
+
+                    <i class="fa-solid fa-music"></i>
+
+                    COACH AHMED'S CLASSROOM
+
+                </span>
+
+                <h1>
+
+                    Learn Piano.
+
+                    <span>Play Better.</span>
+
+                </h1>
+
+                <p>
+
+                    Welcome to your personal piano classroom.
+                    Watch Coach Ahmed's lessons, practice what
+                    you learn, and complete your sessions step
+                    by step.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="hero-icon">
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+            </div>
+
+        </section>
+
+
+
+
+
+        <!-- =====================================
+             COACH
+        ====================================== -->
+
+        <section class="coach-section">
+
+            <div class="coach-card">
+
+                <div class="coach-avatar">
+
+                    <i class="fa-solid fa-user-tie"></i>
+
+                </div>
+
+                <div class="coach-info">
+
+                    <span>
+                        YOUR PIANO COACH
+                    </span>
+
+                    <h2>
+                        Coach Ahmed
+                    </h2>
+
+                    <p>
+                        Your guide on your piano journey.
+                    </p>
+
+                </div>
+
+                <div class="coach-badge">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Piano Coach
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+
+        <!-- =====================================
+             SESSION DASHBOARD
+        ====================================== -->
+
+        <section class="session-dashboard">
+
+
+
+            <!-- DASHBOARD TOP -->
+
+            <div class="dashboard-top">
+
+                <div>
+
+                    <span class="section-label">
+                        YOUR LESSONS
+                    </span>
+
+                    <h2>
+                        Coach Ahmed's Sessions
+                    </h2>
+
+                    <p>
+                        Watch your lessons and keep
+                        improving one step at a time.
+                    </p>
+
+                </div>
+
+
+
+                <!-- SEARCH -->
+
+                <div class="session-search">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="search"
+                        id="sessionSearch"
+                        placeholder="Search sessions..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+            </div>
+
+
+
+
+
+            <!-- =================================
+                 PROGRESS
+            ================================== -->
+
+            <div class="progress-card">
+
+                <div class="progress-info">
+
+                    <div>
+
+                        <span>
+                            YOUR PROGRESS
+                        </span>
+
+                        <strong class="progress-text">
+                            0% Complete
+                        </strong>
+
+                    </div>
+
+                    <div class="progress-number">
+
+                        <span class="completed-count">
+                            0
+                        </span>
+
+                        /
+
+                        <span class="total-count">
+                            3
+                        </span>
+
+                        Sessions
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="progress-bar">
+
+                    <div class="progress-fill"></div>
+
+                </div>
+
+            </div>
+
+
+
+
+
+            <!-- =================================
+                 SESSION CARDS
+            ================================== -->
+
+            <div class="sessions-list">
+
+
+
+                <!-- =================================
+                     SESSION 1
+                ================================== -->
+
+                <article
+                    class="session-card"
+                    data-session="session-1"
+                    data-new="true"
+                >
+
+                    <!-- NEW BADGE -->
+
+                    <div class="session-number">
+
+                        <span>
+                            SESSION 01
+                        </span>
+
+                        <span class="new-badge">
+
+                            <i class="fa-solid fa-sparkles"></i>
+
+                            NEW
+
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- VIDEO -->
+
+                    <div class="session-video">
+
+                        <video
+                            controls
+                            preload="metadata"
+                            data-session="session-1"
+                        >
+
+                            <source
+                                src="ahmedsessions/ahmedsession1.mp4"
+                                type="video/mp4"
+                            >
+
+                            Your browser does not support
+                            the video element.
+
+                        </video>
+
+                    </div>
+
+
+
+                    <!-- SESSION INFORMATION -->
+
+                    <div class="session-content">
+
+                        <div class="session-title-row">
+
+                            <div>
+
+                                <span class="lesson-type">
+                                    PIANO LESSON
+                                </span>
+
+                                <h2>
+                                    Session 1 — Piano Basics
+                                </h2>
+
+                            </div>
+
+
+
+                            <!-- FAVORITE -->
+
+                            <button
+                                type="button"
+                                class="favorite-session"
+                                title="Favorite session"
+                                aria-label="Favorite session"
+                            >
+
+                                <i class="fa-regular fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+
+
+                        <p class="session-description">
+
+                            Welcome to your first piano
+                            session with Coach Ahmed.
+                            Watch the lesson carefully and
+                            practice everything explained
+                            during the session.
+
+                        </p>
+
+
+
+                        <!-- WHAT YOU WILL LEARN -->
+
+                        <div class="learning-box">
+
+                            <h3>
+
+                                <i class="fa-solid fa-lightbulb"></i>
+
+                                What you'll learn
+
+                            </h3>
+
+                            <ul>
+
+                                <li>
+
+                                    <i class="fa-solid fa-check"></i>
+
+                                    Piano basics
+
+                                </li>
+
+                                <li>
+
+                                    <i class="fa-solid fa-check"></i>
+
+                                    Keyboard orientation
+
+                                </li>
+
+                                <li>
+
+                                    <i class="fa-solid fa-check"></i>
+
+                                    Getting comfortable
+                                    with the keys
+
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+
+
+                        <!-- HOMEWORK -->
+
+                        <div class="homework-box">
+
+                            <div class="homework-icon">
+
+                                <i class="fa-solid fa-book"></i>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    HOMEWORK
+                                </span>
+
+                                <h3>
+
+                                    Practice what Coach Ahmed
+                                    taught in this session.
+
+                                </h3>
+
+                                <p>
+
+                                    More homework will be added
+                                    by Coach Ahmed after the lesson.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- ACTIONS -->
+
+                        <div class="session-actions">
+
+                            <button
+                                type="button"
+                                class="complete-session"
+                            >
+
+                                <i class="fa-solid fa-check"></i>
+
+                                Mark Complete
+
+                            </button>
+
+
+
+                            <button
+                                type="button"
+                                class="open-session"
+                            >
+
+                                <i class="fa-solid fa-play"></i>
+
+                                Watch Session
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+
+
+                <!-- =================================
+                     SESSION 2
+                ================================== -->
+
+                <article
+                    class="session-card"
+                    data-session="session-2"
+                    data-new="true"
+                >
+
+                    <!-- NEW BADGE -->
+
+                    <div class="session-number">
+
+                        <span>
+                            SESSION 02
+                        </span>
+
+                        <span class="new-badge">
+
+                            <i class="fa-solid fa-sparkles"></i>
+
+                            NEW
+
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- VIDEO -->
+
+                    <div class="session-video">
+
+                        <video
+                            controls
+                            preload="metadata"
+                            data-session="session-2"
+                        >
+
+                            <source
+                                src="ahmedsessions/ahmedsession2.mp4"
+                                type="video/mp4"
+                            >
+
+                            Your browser does not support
+                            the video element.
+
+                        </video>
+
+                    </div>
+
+
+
+                    <!-- SESSION INFORMATION -->
+
+                    <div class="session-content">
+
+                        <div class="session-title-row">
+
+                            <div>
+
+                                <span class="lesson-type">
+                                    PIANO LESSON
+                                </span>
+
+                                <h2>
+                                    Session 2 — Continue Your Journey
+                                </h2>
+
+                            </div>
+
+
+
+                            <!-- FAVORITE -->
+
+                            <button
+                                type="button"
+                                class="favorite-session"
+                                title="Favorite session"
+                                aria-label="Favorite session"
+                            >
+
+                                <i class="fa-regular fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+
+
+                        <p class="session-description">
+
+                            Continue learning with Coach Ahmed
+                            and build on the skills from your
+                            first session.
+
+                        </p>
+
+
+
+                        <!-- WHAT YOU WILL LEARN -->
+
+                        <div class="learning-box">
+
+                            <h3>
+
+                                <i class="fa-solid fa-lightbulb"></i>
+
+                                What you'll learn
+
+                            </h3>
+
+                            <ul>
+
+                                <li>
+
+                                    <i class="fa-solid fa-check"></i>
+
+                                    New piano skills
+
+                                </li>
+
+                                <li>
+
+                                    <i class="fa-solid fa-check"></i>
+
+                                    Practice techniques
+
+                                </li>
+
+                                <li>
+
+                                    <i class="fa-solid fa-check"></i>
+
+                                    Improve your playing
+
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+
+
+                        <!-- HOMEWORK -->
+
+                        <div class="homework-box">
+
+                            <div class="homework-icon">
+
+                                <i class="fa-solid fa-book"></i>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    HOMEWORK
+                                </span>
+
+                                <h3>
+
+                                    Practice what Coach Ahmed
+                                    taught in Session 2.
+
+                                </h3>
+
+                                <p>
+
+                                    Homework can be updated by
+                                    Coach Ahmed after the lesson.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- ACTIONS -->
+
+                        <div class="session-actions">
+
+                            <button
+                                type="button"
+                                class="complete-session"
+                            >
+
+                                <i class="fa-solid fa-check"></i>
+
+                                Mark Complete
+
+                            </button>
+
+
+
+                            <button
+                                type="button"
+                                class="open-session"
+                            >
+
+                                <i class="fa-solid fa-play"></i>
+
+                                Watch Session
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+
+
+                <!-- =================================
+                     SESSION 3
+                ================================== -->
+
+                <article
+                    class="session-card"
+                    data-session="session-3"
+                    data-new="true"
+                >
+
+                    <!-- NEW BADGE -->
+
+                    <div class="session-number">
+
+                        <span>
+                            SESSION 03
+                        </span>
+
+                        <span class="new-badge">
+
+                            <i class="fa-solid fa-sparkles"></i>
+
+                            NEW
+
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- VIDEO -->
+
+                    <div class="session-video">
+
+                        <video
+                            controls
+                            preload="metadata"
+                            data-session="session-3"
+                        >
+
+                            <source
+                                src="ahmedsessions/ahmedsession3.mp4"
+                                type="video/mp4"
+                            >
+
+                            Your browser does not support
+                            the video element.
+
+                        </video>
+
+                    </div>
+
+
+
+                    <!-- SESSION INFORMATION -->
+
+                    <div class="session-content">
+
+                        <div class="session-title-row">
+
+                            <div>
+
+                                <span class="lesson-type">
+                                    PIANO LESSON
+                                </span>
+
+                                <h2>
+                                    Session 3 — Continue Your Journey
+                                </h2>
+
+                            </div>
+
+
+
+                            <!-- FAVORITE -->
+
+                            <button
+                                type="button"
+                                class="favorite-session"
+                                title="Favorite session"
+                                aria-label="Favorite session"
+                            >
+
+                                <i class="fa-regular fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+
+
+                        <p class="session-description">
+
+                            Continue learning with Coach Ahmed
+                            and build on the skills from your
+                            previous sessions.
+
+                        </p>
+
+
+
+                        <!-- WHAT YOU WILL LEARN -->
+
+                        <div class="learning-box">
+
+                            <h3>
+
+                                <i class="fa-solid fa-lightbulb"></i>
+
+                                What you'll learn
+
+                            </h3>
+
+                            <ul>
+
+                                <li>
+
+                                    <i class="fa-solid fa-check"></i>
+
+                                    New piano skills
+
+                                </li>
+
+                                <li>
+
+                                    <i class="fa-solid fa-check"></i>
+
+                                    Practice techniques
+
+                                </li>
+
+                                <li>
+
+                                    <i class="fa-solid fa-check"></i>
+
+                                    Improve your playing
+
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+
+
+                        <!-- HOMEWORK -->
+
+                        <div class="homework-box">
+
+                            <div class="homework-icon">
+
+                                <i class="fa-solid fa-book"></i>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    HOMEWORK
+                                </span>
+
+                                <h3>
+
+                                    Practice what Coach Ahmed
+                                    taught in Session 3.
+
+                                </h3>
+
+                                <p>
+
+                                    Homework can be updated by
+                                    Coach Ahmed after the lesson.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- ACTIONS -->
+
+                        <div class="session-actions">
+
+                            <button
+                                type="button"
+                                class="complete-session"
+                            >
+
+                                <i class="fa-solid fa-check"></i>
+
+                                Mark Complete
+
+                            </button>
+
+
+
+                            <button
+                                type="button"
+                                class="open-session"
+                            >
+
+                                <i class="fa-solid fa-play"></i>
+
+                                Watch Session
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+
+
+                <!-- =================================
+                     FUTURE SESSION PLACEHOLDER
+                ================================== -->
+
+                <article class="coming-session">
+
+                    <div class="coming-icon">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            COMING SOON
+                        </span>
+
+                        <h2>
+                            Your next lesson is on the way
+                        </h2>
+
+                        <p>
+
+                            Coach Ahmed will add the next
+                            session here when it is ready.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+
+
+        <!-- =====================================
+             MOTIVATION
+        ====================================== -->
+
+        <section class="motivation">
+
+            <div class="motivation-icon">
+
+                <i class="fa-solid fa-fire"></i>
+
+            </div>
+
+            <div>
+
+                <span>
+                    KEEP GOING
+                </span>
+
+                <h2>
+                    Every great pianist started with one note.
+                </h2>
+
+                <p>
+
+                    Watch your lesson, practice regularly,
+                    and don't be afraid to make mistakes.
+                    That's how you improve.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+    </main>
+
+
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+
+        <div class="footer-brand">
+
+            <h2>
+                Piano <span>Masters</span>
+            </h2>
+
+            <p>
+                Learn. Play. Create.
+            </p>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h3>
+                Coach Ahmed
+            </h3>
+
+            <p>
+                Piano lessons made simple.
+            </p>
+
+            <p>
+                Practice. Improve. Perform.
+            </p>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <p>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+            </p>
+
+            <p>
+
+                <a href="mypiano.html">
+                    Keyboard
+                </a>
+
+            </p>
+
+            <p>
+
+                <a href="notes.html">
+                    Notes
+                </a>
+
+            </p>
+
+        </div>
+
+
+
+        <div class="social">
+
+            <h3>
+                Follow Us
+            </h3>
+
+            <div class="social-icons">
+
+                <a
+                    href="https://www.facebook.com/"
+                    aria-label="Facebook"
+                >
+
+                    <i class="fa-brands fa-facebook-f"></i>
+
+                </a>
+
+                <a
+                    href="#"
+                    aria-label="TikTok"
+                >
+
+                    <i class="fa-brands fa-tiktok"></i>
+
+                </a>
+
+                <a
+                    href="#"
+                    aria-label="X"
+                >
+
+                    <i class="fa-brands fa-x-twitter"></i>
+
+                </a>
+
+                <a
+                    href="#"
+                    aria-label="YouTube"
+                >
+
+                    <i class="fa-brands fa-youtube"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+            <p>
+
+                Made with
+
+                <i class="fa-solid fa-heart"></i>
+
+                by Tarek Sadek
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="session.js"></script>
+
+</body>
+
+</html>
