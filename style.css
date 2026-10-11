@@ -1,213 +1,620 @@
-header{
-    background-color: darkgreen;
-    background-attachment: fixed;
+/* ========================================
+   SLO RECYCLE — MODERN ECO DESIGN
+======================================== */
+
+/* 1. COLORS AND RESET */
+
+:root {
+    --forest: #123c2a;
+    --deep-green: #092c20;
+    --green: #26734d;
+    --mint: #a7f3c0;
+    --lime: #d5f5a3;
+    --cream: #f6f8ef;
+    --white: #ffffff;
+    --text: #183b2b;
+    --muted: #dcebe0;
+    --shadow: 0 15px 40px rgba(4, 35, 22, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:focus-visible {
+    outline: 3px solid var(--lime);
+    outline-offset: 5px;
 }
 
 
+/* ========================================
+   2. NAVIGATION BAR
+======================================== */
 
+header {
+    position: relative;
+    z-index: 10;
+    background: rgba(9, 44, 32, 0.98);
+    border-bottom: 1px solid rgba(167, 243, 192, 0.15);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
+}
 
+nav {
+    max-width: 1450px;
+    min-height: 88px;
+    margin: 0 auto;
+    padding: 15px 5%;
 
-
-nav{
     display: flex;
-    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
-    margin-inline: 40px;
-}
-
-.logo h1 .bigone{
-    color: blue;
-
-}
-
-.logo h1{
-    color: white;
-    font-weight: 1000px;
-    font-size: 40px;
-}
-
-.l{
-    color: blue;
-    
-
-}
-
-.s{
-    color: white;
-    border: solid 2px black;
-    border-radius: 15px;
-    box-shadow: 2px blue;
+    gap: 30px;
 }
 
 
+/* Logo */
+
+.logo h1 {
+    color: var(--white);
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    white-space: nowrap;
+}
+
+.logo h1 .bigone {
+    color: var(--mint);
+}
+
+.s {
+    display: inline-block;
+    padding: 0 7px;
+    color: var(--white);
+    border: 2px solid var(--mint);
+    border-radius: 12px;
+}
+
+.l {
+    color: var(--lime);
+}
 
 
-.links{
+/* Navigation links */
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
     list-style: none;
-    gap: 30px;
-
 }
 
-.links a{
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    font-weight: 100px;
-    gap: 30px;
-    transition:color,1s;
-
+.links a {
+    position: relative;
+    color: #e6f4e9;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
-.links a:hover{
-    color: blue;
+.links a::after {
+    content: "";
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--mint);
+    transition: width 0.3s ease;
 }
 
-
-    
-.wrapper a{
-    text-decoration: none;
-    color: blue;
-    background-color: white;
-    width: 50px;
-    height: 40px;
-    border-radius: 5px;
-    font-size: x-large;
-    transition:color,1s;
-
+.links a:hover {
+    color: var(--mint);
 }
 
-.wrapper a:hover{
-    background-color: blue;
-    color: white;
+.links a:hover::after {
+    width: 100%;
 }
 
 
+/* Main navigation button */
+
+.wrapper a {
+    display: inline-block;
+    padding: 12px 23px;
+    border: 1px solid var(--mint);
+    border-radius: 50px;
+
+    background: var(--mint);
+    color: var(--deep-green);
+
+    font-size: 14px;
+    font-weight: 800;
+    white-space: nowrap;
+
+    box-shadow: 0 5px 15px rgba(167, 243, 192, 0.12);
+    transition: all 0.3s ease;
+}
+
+.wrapper a:hover {
+    background: transparent;
+    color: var(--mint);
+    transform: translateY(-3px);
+}
 
 
+/* ========================================
+   3. MAIN BACKGROUND
+======================================== */
 
+.bodysec {
+    position: relative;
+    isolation: isolate;
+    min-height: 700px;
+    padding: 80px 5%;
 
-.bodysec{
-    background-image:url(https://png.pngtree.com/thumb_back/fh260/background/20230627/pngtree-illustration-of-earth-preservation-3d-rendered-hand-holding-recycle-icon-image_3684729.jpg);
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: center;
+    gap: 25px;
+
+    background-color: var(--deep-green);
+    background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20230627/pngtree-illustration-of-earth-preservation-3d-rendered-hand-holding-recycle-icon-image_3684729.jpg");
     background-repeat: no-repeat;
-    height: 100vh;
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 650px;
-    
+    background-attachment: scroll;
 }
 
-.bodysec  h1{
-    color: white;
-    font-size: 40px;
 
+/* Atmospheric green overlay */
 
+.bodysec::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background:
+        radial-gradient(
+            ellipse at 15% 20%,
+            rgba(68, 164, 105, 0.28),
+            transparent 45%
+        ),
+        linear-gradient(
+            120deg,
+            rgba(5, 32, 22, 0.92),
+            rgba(9, 54, 35, 0.72),
+            rgba(5, 32, 22, 0.86)
+        );
 }
 
-.bodysec p{
-    color: white;
-    font-weight: 900;
-    font-size: large;
+
+/* ========================================
+   4. SHARED TEXT
+======================================== */
+
+.bodysec h1,
+.bodysec h2 {
+    color: var(--white);
+    line-height: 1.2;
+    letter-spacing: -0.8px;
 }
 
-.bodysec .sec1{
+.bodysec p {
+    color: #e2f0e6;
+    font-size: 15px;
+    line-height: 1.85;
+}
+
+.bodysec .section-label,
+.bodysec .eyebrow {
+    color: var(--mint);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+/* ========================================
+   5. INTRODUCTION CARD
+======================================== */
+
+.bodysec .sec1 {
     display: flex;
     flex-direction: column;
-    margin-inline: 40px;
+    align-items: flex-start;
+    gap: 17px;
+
+    padding: 35px 30px;
+    border-radius: 24px;
+
+    background: rgba(12, 46, 32, 0.68);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
 }
 
-.bodysec .sec2 h3{
-    color: white;
-    font-size: xx-large;
+.bodysec .sec1 h1 {
+    font-size: clamp(32px, 3.1vw, 46px);
+    font-weight: 850;
+    letter-spacing: -1.5px;
 }
 
-.bodysec .sec2{
-    margin-inline: 40px;
+.bodysec .sec1 p {
+    margin: 0;
 }
 
-
-.bodysec .sec2 a{
-    text-decoration: none;
-    color: blue;
-    background-color: white;
-    width:50px;
-    height: 40px;
-    border-radius: 5px;
-    font-size: x-large;
-    transition:color,1s;
-}
-
-.bodysec .sec2 #thesec1:hover{
-    background-color: blue;
-    color: white;
-}
-
-.bodysec .sec3 #thesec2{
-    text-decoration: none;
-    color: white;
-    background-color: purple;
-    border-radius: 5px;
-    font-size:x-large;
-    transition:color,1s;
-    
-    
-}
-
-.bodysec .sec3 h1{
-    color: white;
-
-}
-.bodysec .sec3 h3{
-    color: white;
-    font-size: larger;
-}
-
-.bodysec .sec3 #thesec2:hover{
-    background-color: white;
-    color: purple;
+.bodysec .sec1 .recycling-message {
+    color: var(--lime);
+    font-weight: 700;
 }
 
 
-footer{
-    background-color:darkgreen;
+/* ========================================
+   6. COMPETITION CARD
+======================================== */
+
+.bodysec .sec2 {
+    padding: 32px 28px;
+    border-radius: 24px;
+
+    background: linear-gradient(
+        145deg,
+        rgba(34, 105, 69, 0.88),
+        rgba(11, 52, 35, 0.91)
+    );
+
+    border: 1px solid rgba(167, 243, 192, 0.28);
+    box-shadow: var(--shadow);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
 }
 
-footer .big .small h1{
-    color: white;
+.bodysec .sec2:hover {
+    transform: translateY(-8px);
+    border-color: var(--mint);
+    box-shadow: 0 22px 45px rgba(0, 0, 0, 0.22);
 }
 
-.re{
-    color: blue;
+.bodysec .sec2 h2 {
+    margin: 12px 0;
+    font-size: 29px;
+    font-weight: 800;
 }
 
-.sss{
-    color: white;
-    border: solid 1px black;
-    border-radius: 15px;
-    
+.bodysec .sec2 p {
+    margin-bottom: 25px;
 }
 
-.big{
-    margin-inline: 40px;
+
+/* ========================================
+   7. RECYCLING VIDEO CARD
+======================================== */
+
+.bodysec .sec3 {
+    padding: 32px 28px;
+    border-radius: 24px;
+
+    background: rgba(246, 248, 239, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease;
+}
+
+.bodysec .sec3:hover {
+    transform: translateY(-8px);
+    background: rgba(246, 248, 239, 0.16);
+}
+
+.bodysec .sec3 h2 {
+    margin: 12px 0;
+    font-size: 29px;
+    font-weight: 800;
+}
+
+.bodysec .sec3 p {
+    margin-bottom: 25px;
+}
+
+
+/* ========================================
+   8. BUTTONS
+======================================== */
+
+.primary-button,
+.bodysec .sec2 a,
+.bodysec .sec3 a {
+    display: inline-block;
+    width: fit-content;
+    max-width: 100%;
+    padding: 13px 19px;
+
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.6;
+    text-align: center;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Green buttons */
+
+.primary-button,
+.bodysec .sec2 a {
+    color: var(--deep-green);
+    background: var(--mint);
+    border: 1px solid var(--mint);
+}
+
+.primary-button:hover,
+.bodysec .sec2 a:hover {
+    color: var(--white);
+    background: var(--green);
+    border-color: var(--mint);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+
+/* White button */
+
+.bodysec .sec3 a {
+    color: var(--deep-green);
+    background: var(--cream);
+    border: 1px solid var(--cream);
+}
+
+.bodysec .sec3 a:hover {
+    color: var(--deep-green);
+    background: var(--lime);
+    border-color: var(--lime);
+    transform: translateY(-3px);
+}
+
+
+/* ========================================
+   9. FOOTER
+======================================== */
+
+footer {
+    padding: 55px 5% 20px;
+    color: var(--white);
+    background:
+        radial-gradient(
+            ellipse at top right,
+            rgba(54, 126, 79, 0.28),
+            transparent 55%
+        ),
+        var(--deep-green);
+    border-top: 1px solid rgba(167, 243, 192, 0.15);
+}
+
+.big {
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
     justify-content: space-between;
+    gap: 40px;
+
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-.big ul h3{
-    color: white;
+.big .small {
+    max-width: 440px;
 }
 
-.big .small p{
-    color: white;
+footer .big .small h1,
+footer .big .small h2 {
+    margin-bottom: 14px;
+    color: var(--white);
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -0.7px;
+}
+
+.re {
+    color: var(--mint);
+}
+
+.sss {
+    display: inline-block;
+    padding: 0 6px;
+    border: 2px solid var(--mint);
+    border-radius: 10px;
+    color: var(--white);
+}
+
+.big .small p,
+.footer-info p {
+    color: #c9ded0;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.footer-info h3 {
+    margin-bottom: 5px;
+    color: var(--mint);
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.footer-info p {
+    margin-bottom: 16px;
 }
 
 
+/* Footer copyright */
+
+.footer-bottom {
+    max-width: 1400px;
+    margin: 35px auto 0;
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #b9d1c1;
+    font-size: 12px;
+}
 
 
+/* ========================================
+   10. TABLET RESPONSIVENESS
+======================================== */
+
+@media (max-width: 1050px) {
+
+    nav {
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 18px 4%;
+    }
+
+    .links {
+        gap: 20px;
+    }
+
+    .bodysec {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 55px 4%;
+    }
+
+    .bodysec .sec1 {
+        grid-column: 1 / -1;
+    }
+
+    .bodysec .sec2,
+    .bodysec .sec3 {
+        padding: 26px 23px;
+    }
+}
 
 
+/* ========================================
+   11. MOBILE RESPONSIVENESS
+======================================== */
 
+@media (max-width: 650px) {
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 22px 18px;
+    }
+
+    .logo h1 {
+        font-size: 31px;
+    }
+
+    .links {
+        flex-wrap: wrap;
+        gap: 13px 20px;
+        justify-content: center;
+    }
+
+    .links a {
+        font-size: 13px;
+    }
+
+    .bodysec {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        min-height: auto;
+        padding: 35px 18px;
+        background-position: center;
+    }
+
+    .bodysec .sec1,
+    .bodysec .sec2,
+    .bodysec .sec3 {
+        grid-column: auto;
+        padding: 27px 23px;
+        border-radius: 20px;
+    }
+
+    .bodysec .sec1 h1 {
+        font-size: 35px;
+    }
+
+    .bodysec .sec2 h2,
+    .bodysec .sec3 h2 {
+        font-size: 26px;
+    }
+
+    .bodysec p {
+        font-size: 14px;
+    }
+
+    .big {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    footer {
+        padding: 40px 22px 18px;
+    }
+
+    footer .big .small h1,
+    footer .big .small h2 {
+        font-size: 27px;
+    }
+
+    .footer-bottom {
+        margin-top: 25px;
+    }
+}
+
+
+/* ========================================
+   12. REDUCED MOTION ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
